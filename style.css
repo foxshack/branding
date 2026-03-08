@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
 :root {
   /* Base colours and variants */
-  --fs-color-primary: #D96E3C;
-  --fs-color-primary-light: rgb(233.635193133, 173.4763948498, 145.364806867);
-  --fs-color-primary-lighter: rgb(250.2703862661, 236.9527896996, 230.7296137339);
+  --fs-color-primary: #ba722a;
+  --fs-color-primary-light: rgb(221.8421052632, 165, 108.1578947368);
+  --fs-color-primary-lighter: rgb(240.6315789474, 216, 191.3684210526);
   --fs-color-primary-lightest: white;
-  --fs-color-primary-dark: rgb(146.4592274678, 66.0944206009, 28.5407725322);
-  --fs-color-primary-darker: rgb(61.0944206009, 27.5708154506, 11.9055793991);
-  --fs-color-accent1: #6A6A6A;
-  --fs-color-accent1-light: #9d9d9d;
-  --fs-color-accent1-lighter: #d0d0d0;
-  --fs-color-accent1-lightest: white;
-  --fs-color-accent1-dark: #373737;
-  --fs-color-accent1-darker: #040404;
+  --fs-color-primary-dark: rgb(102.7894736842, 63, 23.2105263158);
+  --fs-color-primary-darker: rgb(19.5789473684, 12, 4.4210526316);
+  --fs-color-accent1: #5a5a5a;
+  --fs-color-accent1-light: #8d8d8d;
+  --fs-color-accent1-lighter: silver;
+  --fs-color-accent1-lightest: #f3f3f3;
+  --fs-color-accent1-dark: #272727;
+  --fs-color-accent1-darker: black;
   --fs-color-accent2: #8BBF2F;
   --fs-color-accent2-light: rgb(184.2857142857, 221.4285714286, 118.5714285714);
   --fs-color-accent2-lighter: rgb(226.7142857143, 241.5714285714, 200.4285714286);
@@ -23,6 +23,7 @@
   --fs-color-text: var(--fs-color-accent1-darker);
   --fs-color-text-muted: var(--fs-color-accent1);
   --fs-color-background: #FFFFFF;
+  --fs-color-text-light: #FFFFFF;
   --fs-color-border: var(--fs-color-accent1-lighter);
   --fs-color-link: var(--fs-color-accent2);
   --fs-color-link-hover: var(--fs-color-accent2-dark);
@@ -58,7 +59,7 @@ body {
   flex-direction: column;
 }
 
-main {
+main, .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 1rem;
@@ -79,7 +80,7 @@ h6 {
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
   margin-bottom: 1rem;
-  color: var(--fs-color-primary-dark);
+  color: var(--fs-color-primary);
 }
 
 h1 {
@@ -301,8 +302,8 @@ nav a {
   transition: background-color 0.2s ease;
 }
 
-nav a:hover {
-  background-color: var(--fs-color-accent1-dark);
+nav a:hover, nav a:focus, nav a:active, nav a:visited {
+  background-color: var(--fs-color-accent1-lighter);
   border-bottom-color: transparent;
 }
 
@@ -437,8 +438,8 @@ button {
   font-weight: 600;
   border: none;
   border-radius: 4px;
-  background-color: var(--fs-color-primary-dark);
-  color: #FFFFFF;
+  background-color: var(--fs-color-primary);
+  color: var(--fs-color-text-light);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
