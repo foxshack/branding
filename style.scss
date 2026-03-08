@@ -1,30 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+// Color variation map - adjust percentages to change all tints/shades at once
+$color-variations: (
+  'light': 20%,
+  'lighter': 40%,
+  'lightest': 60%,
+  'dark': 20%,
+  'darker': 40%
+);
+
+// Base theme colors - change these to update all variants automatically
+$theme-colors: (
+  'primary': #D96E3C,    // Solar Clay
+  'accent1': #6A6A6A,    // Mineral Grey
+  'accent2': #8BBF2F     // Verdant Lime
+);
+
 :root {
-  /* Base colours */
-  
-  /* Primary (Solar Clay) with Tints & Shades */
-  --fs-color-primary: #D96E3C;
-  --fs-color-primary-light: #E89A72;     /* 20% tint */
-  --fs-color-primary-lighter: #F2C2A6;   /* 40% tint */
-  --fs-color-primary-lightest: hsl(13, 59%, 90%); /* 60% tint */
-  --fs-color-primary-dark: #B4542F;      /* 20% shade */
-  --fs-color-primary-darker: #8C3F23;    /* 40% shade */
-
-  /* Accent 1 (Mineral Grey) with Tints & Shades */
-  --fs-color-accent1: #6A6A6A;
-  --fs-color-accent1-light: hsl(0, 0%, 55%);     /* 20% tint */
-  --fs-color-accent1-lighter: hsl(0, 0%, 70%);   /* 40% tint */
-  --fs-color-accent1-lightest: hsl(0, 0%, 90%);   /* 60% tint */
-  --fs-color-accent1-dark: #4F4F4F;      /* 20% shade */
-  --fs-color-accent1-darker: #333333;    /* 40% shade */
-
-  /* Accent 2 (Verdant Lime) with Tints & Shades */
-  --fs-color-accent2: #8BBF2F;
-  --fs-color-accent2-light: #A6D85A;     /* 20% tint */
-  --fs-color-accent2-lighter: #C4EB8C;   /* 40% tint */
-  --fs-color-accent2-lightest: hsl(90, 59%, 90%); /* 60% tint */
-  --fs-color-accent2-dark: #6F9926;      /* 20% shade */
-  --fs-color-accent2-darker: #4C6B19;    /* 40% shade */
+  /* Base colours and variants */
+  @each $color-name, $color-value in $theme-colors {
+    --fs-color-#{$color-name}: #{$color-value};
+    
+    @each $variant-name, $amount in $color-variations {
+      @if str-index($variant-name, 'light') {
+        --fs-color-#{$color-name}-#{$variant-name}: #{lighten($color-value, $amount)};
+      } @else {
+        --fs-color-#{$color-name}-#{$variant-name}: #{darken($color-value, $amount)};
+      }
+    }
+  }
 
   /* Semantic colour tokens */
   --fs-color-text: var(--fs-color-accent1-darker);
@@ -87,7 +91,7 @@ h6 {
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
   margin-bottom: 1rem;
-  color: var(--fs-color-accent1-darker);
+  color: var(--fs-color-primary-dark);
 }
 
 h1 {

@@ -1,27 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
 :root {
-  /* Base colours */
-  /* Primary (Solar Clay) with Tints & Shades */
+  /* Base colours and variants */
   --fs-color-primary: #D96E3C;
-  --fs-color-primary-light: #E89A72; /* 20% tint */
-  --fs-color-primary-lighter: #F2C2A6; /* 40% tint */
-  --fs-color-primary-lightest: hsl(13, 59%, 90%); /* 60% tint */
-  --fs-color-primary-dark: #B4542F; /* 20% shade */
-  --fs-color-primary-darker: #8C3F23; /* 40% shade */
-  /* Accent 1 (Mineral Grey) with Tints & Shades */
+  --fs-color-primary-light: rgb(233.635193133, 173.4763948498, 145.364806867);
+  --fs-color-primary-lighter: rgb(250.2703862661, 236.9527896996, 230.7296137339);
+  --fs-color-primary-lightest: white;
+  --fs-color-primary-dark: rgb(146.4592274678, 66.0944206009, 28.5407725322);
+  --fs-color-primary-darker: rgb(61.0944206009, 27.5708154506, 11.9055793991);
   --fs-color-accent1: #6A6A6A;
-  --fs-color-accent1-light: hsl(0, 0%, 55%); /* 20% tint */
-  --fs-color-accent1-lighter: hsl(0, 0%, 70%); /* 40% tint */
-  --fs-color-accent1-lightest: hsl(0, 0%, 90%); /* 60% tint */
-  --fs-color-accent1-dark: #4F4F4F; /* 20% shade */
-  --fs-color-accent1-darker: #333333; /* 40% shade */
-  /* Accent 2 (Verdant Lime) with Tints & Shades */
+  --fs-color-accent1-light: #9d9d9d;
+  --fs-color-accent1-lighter: #d0d0d0;
+  --fs-color-accent1-lightest: white;
+  --fs-color-accent1-dark: #373737;
+  --fs-color-accent1-darker: #040404;
   --fs-color-accent2: #8BBF2F;
-  --fs-color-accent2-light: #A6D85A; /* 20% tint */
-  --fs-color-accent2-lighter: #C4EB8C; /* 40% tint */
-  --fs-color-accent2-lightest: hsl(90, 59%, 90%); /* 60% tint */
-  --fs-color-accent2-dark: #6F9926; /* 20% shade */
-  --fs-color-accent2-darker: #4C6B19; /* 40% shade */
+  --fs-color-accent2-light: rgb(184.2857142857, 221.4285714286, 118.5714285714);
+  --fs-color-accent2-lighter: rgb(226.7142857143, 241.5714285714, 200.4285714286);
+  --fs-color-accent2-lightest: white;
+  --fs-color-accent2-dark: rgb(79.4285714286, 109.1428571429, 26.8571428571);
+  --fs-color-accent2-darker: rgb(19.8571428571, 27.2857142857, 6.7142857143);
   /* Semantic colour tokens */
   --fs-color-text: var(--fs-color-accent1-darker);
   --fs-color-text-muted: var(--fs-color-accent1);
@@ -82,7 +79,7 @@ h6 {
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
   margin-bottom: 1rem;
-  color: var(--fs-color-accent1-darker);
+  color: var(--fs-color-primary-dark);
 }
 
 h1 {
