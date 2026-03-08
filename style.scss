@@ -293,8 +293,14 @@ header a:hover {
 
 header div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 header a.brand {
@@ -303,36 +309,64 @@ header a.brand {
   color: var(--fs-color-primary-light);
 }
 
-nav {
-  background-color: inherit;
+header button {
+  display: block;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
 }
 
-nav ul,
-nav ol {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  flex-wrap: wrap;
+header {
+  nav {
+    background-color: var(--fs-color-accent1-dark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.4);
+
+    @media (min-width: 900px) {
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  nav ul,
+  nav ol {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    margin: 0;
+    flex-wrap: wrap;
+  
+    @media (min-width: 900px) {
+      flex-direction: row;
+    }
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav a {
+    color: var(--fs-color-text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  nav a:hover, nav a:focus, nav a:active, nav a:visited {
+    color: var(--fs-color-text-light);
+    background-color: var(--fs-color-accent1);
+    border-bottom-color: transparent;
+  }
 }
 
-nav ul li {
-  margin: 0;
-}
-
-nav a {
-  color: var(--fs-color-text-light);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-nav a:hover, nav a:focus, nav a:active, nav a:visited {
-  color: var(--fs-color-text-light);
-  background-color: var(--fs-color-accent1);
-  border-bottom-color: transparent;
-}
 
 article {
   margin-bottom: 2rem;
