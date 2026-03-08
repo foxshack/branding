@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foxshack Branding - Semantic CSS Theme</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Foxshack Branding</h1>
+    <p>A semantic CSS theme showcase</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#forms">Forms</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Welcome to Semantic Styling</h2>
+      <p>This page demonstrates a <strong>comprehensive semantic CSS theme</strong> built with your brand colors: <em>Solar Clay</em>, <em>Mineral Grey</em>, and <em>Verdant Lime</em>. Every HTML element is styled based on its <mark>semantic meaning</mark>, not arbitrary classes.</p>
+      
+      <aside>
+        <h3>What's Semantic CSS?</h3>
+        <p>Semantic CSS means styling HTML elements directly so that your markup structure conveys meaning without needing class names. This approach keeps HTML cleaner and CSS more maintainable.</p>
+      </aside>
+    </article>
+
+    <section id="typography">
+      <h2>Typography & Text Formatting</h2>
+      
+      <article>
+        <h3>Heading Levels</h3>
+        <p>This page uses proper heading hierarchy to structure content semantically.</p>
+        
+        <h4>Fourth Level Heading</h4>
+        <p>Headings help organize content and improve accessibility for screen readers.</p>
+        
+        <h5>Fifth Level Heading</h5>
+        <h6>Sixth Level Heading</h6>
+      </article>
+
+      <article>
+        <h3>Text Formatting</h3>
+        <p>You can use <strong>bold text</strong> to emphasize importance, <em>italic text</em> for emphasis, and <small>smaller text</small> for supplementary information.</p>
+        <p>Use <mark>highlighted text</mark> to draw attention to specific terms or concepts.</p>
+        <p>For code references within text, use <code>inline code</code> formatting.</p>
+      </article>
+
+      <article>
+        <h3>Blockquotes</h3>
+        <blockquote>
+          The design of CSS is constrained by the rules of CSS: it must be simple enough to implement quickly, yet powerful enough to describe the layout of real-world documents.
+          <cite>— W3C CSS Specification</cite>
+        </blockquote>
+      </article>
+    </section>
+
+    <section id="lists">
+      <h2>Lists & Organization</h2>
+
+      <article>
+        <h3>Unordered Lists</h3>
+        <p>Use unordered lists for items without a specific sequence:</p>
+        <ul>
+          <li>Solar Clay - Primary brand color</li>
+          <li>Mineral Grey - Neutral accent color
+            <ul>
+              <li>Lighter shades for backgrounds</li>
+              <li>Darker shades for text</li>
+            </ul>
+          </li>
+          <li>Verdant Lime - Success and callout color</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Ordered Lists</h3>
+        <p>Use ordered lists for sequential steps or rankings:</p>
+        <ol>
+          <li>Reset default browser styles</li>
+          <li>Define CSS custom properties for colors and typography</li>
+          <li>Style semantic HTML elements</li>
+          <li>Ensure proper spacing and hierarchy</li>
+          <li>Test across different content scenarios</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Definition Lists</h3>
+        <dl>
+          <dt>Semantic HTML</dt>
+          <dd>HTML that describes the meaning of content rather than its presentation.</dd>
+          
+          <dt>CSS Custom Properties</dt>
+          <dd>Variables in CSS that can be reused throughout the stylesheet for consistent styling.</dd>
+          
+          <dt>Accessibility</dt>
+          <dd>The practice of making websites usable for everyone, including people with disabilities.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="code">
+      <h2>Code & Preformatted Text</h2>
+
+      <article>
+        <h3>Inline Code</h3>
+        <p>For short code snippets in text, use <code>code</code> elements like this: <code>const theme = { primary: '#D96E3C' }</code>.</p>
+      </article>
+
+      <article>
+        <h3>Code Blocks</h3>
+        <p>For longer code examples, use <code>&lt;pre&gt;</code> elements:</p>
+        <pre><code>/* Define semantic color tokens */
+:root {
+  --fs-color-primary: #D96E3C;
+  --fs-color-text: #333333;
+  --fs-color-background: #FFFFFF;
+}</code></pre>
+      </article>
+
+      <article>
+        <h3>HTML Example</h3>
+        <pre><code>&lt;header&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+      </article>
+    </section>
+
+    <section id="tables">
+      <h2>Tables & Data</h2>
+
+      <article>
+        <h3>Color Palette</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Color Name</th>
+              <th>Hex Value</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Solar Clay</td>
+              <td>#D96E3C</td>
+              <td>Primary brand color, links</td>
+            </tr>
+            <tr>
+              <td>Mineral Grey</td>
+              <td>#6A6A6A</td>
+              <td>Navigation, headers, text</td>
+            </tr>
+            <tr>
+              <td>Verdant Lime</td>
+              <td>#8BBF2F</td>
+              <td>Accent, callouts, highlights</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h3>Feature Comparison</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Semantic</th>
+              <th>Class-Based</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Meaning in HTML</td>
+              <td>✓ Clear</td>
+              <td>Requires context</td>
+            </tr>
+            <tr>
+              <td>Styling Maintenance</td>
+              <td>Centralized</td>
+              <td>Scattered</td>
+            </tr>
+            <tr>
+              <td>Accessibility</td>
+              <td>✓ Excellent</td>
+              <td>Depends on implementation</td>
+            </tr>
+            <tr>
+              <td>CSS File Size</td>
+              <td>✓ Smaller</td>
+              <td>Can grow large</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+
+    <section id="forms">
+      <h2>Forms & Interactions</h2>
+
+      <article>
+        <h3>Contact Form Example</h3>
+        <form>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
+
+          <label for="subscribe">
+            <input type="checkbox" id="subscribe" name="subscribe">
+            Subscribe to our newsletter
+          </label>
+
+          <label for="priority">Priority Level</label>
+          <select id="priority" name="priority">
+            <option value="">Select a priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <button type="submit">Send Message</button>
+          <button type="reset">Clear Form</button>
+        </form>
+      </article>
+    </section>
+
+    <section id="navigation">
+      <h2>Navigation & Links</h2>
+
+      <article>
+        <h3>Link Examples</h3>
+        <p>
+          This is a <a href="#">regular link</a> that you can interact with.
+          Try hovering over it to see the interactive styling.
+          You can also <a href="https://www.example.com">visit external sites</a>.
+        </p>
+      </article>
+    </section>
+
+    <section id="media">
+      <h2>Media & Figures</h2>
+
+      <article>
+        <h3>Images with Captions</h3>
+        <figure>
+          <svg width="300" height="200" style="background: linear-gradient(135deg, #D96E3C 0%, #8BBF2F 100%); border-radius: 4px;">
+            <text x="50%" y="50%" text-anchor="middle" dy="0.3em" fill="white" font-size="24" font-weight="bold">
+              Image Placeholder
+            </text>
+          </svg>
+          <figcaption>This is a placeholder image with a descriptive caption below it.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Summary</h2>
+      <p>This semantic CSS theme provides:</p>
+      <ul>
+        <li>A minimal CSS reset for consistency</li>
+        <li>Proper styling for all standard HTML elements</li>
+        <li>Color-coded semantic elements based on meaning</li>
+        <li>No need for utility or classless frameworks</li>
+        <li>Clean, maintainable HTML structure</li>
+        <li>Built-in accessibility best practices</li>
+      </ul>
+      <p>Start using semantic HTML and watch your websites become more maintainable and accessible!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Foxshack Branding. All rights reserved.</p>
+    <p>
+      <a href="#">Home</a> •
+      <a href="#">About</a> •
+      <a href="#">Contact</a> •
+      <a href="#">Privacy</a>
+    </p>
+  </footer>
+</body>
+</html>
