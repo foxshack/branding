@@ -344,6 +344,10 @@ aside h3 {
   margin-top: 0;
 }
 
+aside p {
+  color: var(--fs-color-accent2-darker);
+}
+
 footer {
   background-color: var(--fs-color-accent1-darker);
   color: #FFFFFF;
@@ -353,11 +357,11 @@ footer {
 }
 
 footer a {
-  color: var(--fs-color-accent2-light);
+  color: var(--fs-color-accent2-lightest);
 }
 
-footer a:hover {
-  color: var(--fs-color-accent2);
+footer a:hover, footer a:focus, footer a:active, footer a:visited {
+  color: var(--fs-color-accent2-light);
 }
 
 /* Tables */
