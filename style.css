@@ -45,6 +45,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: var(--fs-font-family-sans);
   font-size: var(--fs-font-size-base);
   line-height: var(--fs-line-height-base);
