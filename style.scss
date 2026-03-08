@@ -1,27 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 :root {
   /* Base colours */
+  
   /* Primary (Solar Clay) with Tints & Shades */
   --fs-color-primary: #D96E3C;
-  --fs-color-primary-light: #E89A72; /* 20% tint */
-  --fs-color-primary-lighter: #F2C2A6; /* 40% tint */
+  --fs-color-primary-light: #E89A72;     /* 20% tint */
+  --fs-color-primary-lighter: #F2C2A6;   /* 40% tint */
   --fs-color-primary-lightest: hsl(13, 59%, 90%); /* 60% tint */
-  --fs-color-primary-dark: #B4542F; /* 20% shade */
-  --fs-color-primary-darker: #8C3F23; /* 40% shade */
+  --fs-color-primary-dark: #B4542F;      /* 20% shade */
+  --fs-color-primary-darker: #8C3F23;    /* 40% shade */
+
   /* Accent 1 (Mineral Grey) with Tints & Shades */
   --fs-color-accent1: #6A6A6A;
-  --fs-color-accent1-light: hsl(0, 0%, 55%); /* 20% tint */
-  --fs-color-accent1-lighter: hsl(0, 0%, 70%); /* 40% tint */
-  --fs-color-accent1-lightest: hsl(0, 0%, 90%); /* 60% tint */
-  --fs-color-accent1-dark: #4F4F4F; /* 20% shade */
-  --fs-color-accent1-darker: #333333; /* 40% shade */
+  --fs-color-accent1-light: hsl(0, 0%, 55%);     /* 20% tint */
+  --fs-color-accent1-lighter: hsl(0, 0%, 70%);   /* 40% tint */
+  --fs-color-accent1-lightest: hsl(0, 0%, 90%);   /* 60% tint */
+  --fs-color-accent1-dark: #4F4F4F;      /* 20% shade */
+  --fs-color-accent1-darker: #333333;    /* 40% shade */
+
   /* Accent 2 (Verdant Lime) with Tints & Shades */
   --fs-color-accent2: #8BBF2F;
-  --fs-color-accent2-light: #A6D85A; /* 20% tint */
-  --fs-color-accent2-lighter: #C4EB8C; /* 40% tint */
+  --fs-color-accent2-light: #A6D85A;     /* 20% tint */
+  --fs-color-accent2-lighter: #C4EB8C;   /* 40% tint */
   --fs-color-accent2-lightest: hsl(90, 59%, 90%); /* 60% tint */
-  --fs-color-accent2-dark: #6F9926; /* 20% shade */
-  --fs-color-accent2-darker: #4C6B19; /* 40% shade */
+  --fs-color-accent2-dark: #6F9926;      /* 20% shade */
+  --fs-color-accent2-darker: #4C6B19;    /* 40% shade */
+
   /* Semantic colour tokens */
   --fs-color-text: var(--fs-color-accent1-darker);
   --fs-color-text-muted: var(--fs-color-accent1);
@@ -30,6 +34,7 @@
   --fs-color-link: var(--fs-color-accent2);
   --fs-color-link-hover: var(--fs-color-accent2-dark);
   --fs-color-link-visited: var(--fs-color-accent2-darker);
+
   /* Typography */
   --fs-font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --fs-font-family-serif: "Georgia", "Times New Roman", Times, serif;
@@ -403,19 +408,19 @@ select {
   max-width: 100%;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   width: auto;
   max-width: none;
 }
 
-div:has(> input[type=checkbox]) {
+div:has(>input[type="checkbox"]){
   display: flex;
   align-items: center;
-}
-div:has(> input[type=checkbox]) label {
-  margin-left: 0.5rem;
-  margin-bottom: 0;
+  label {
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+  }
 }
 
 input:focus,
@@ -472,5 +477,3 @@ figcaption {
   margin-top: 0.5rem;
   font-style: italic;
 }
-
-/*# sourceMappingURL=style.css.map */
