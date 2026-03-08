@@ -39,7 +39,8 @@ foxshack_branding/
 ├── package.json        # Project configuration and npm scripts
 ├── LICENCE             # Project license
 └── README.md           # This file
-```scss`
+```
+
 The source SASS stylesheet that compiles to `style.css`, containing:
 - CSS custom property definitions for colors, typography, and spacing
 - Semantic styling for all HTML elements (headings, paragraphs, lists, tables, forms, etc.)
