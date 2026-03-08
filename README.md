@@ -9,6 +9,8 @@ A **semantic CSS theme** that provides a unified look and feel across projects. 
 - **Accessible Typography**: Semantic typography system with proper heading hierarchy and text formatting
 - **Complete Component Showcase**: Reference HTML page demonstrating all styled elements in action
 - **CSS Custom Properties**: Organized token system using CSS variables for easy customization
+- **Interactive Navigation**: JavaScript-powered mobile menu with toggle and responsive behavior
+- **SASS Build System**: Organized stylesheet structure with automated compilation to CSS
 
 ## Color Palette
 
@@ -31,18 +33,21 @@ Each color includes tints (lighter) and shades (darker) for depth and visual hie
 ```
 foxshack_branding/
 ├── index.html          # Showcase page demonstrating the theme
-├── style.css           # Complete semantic CSS theme
+├── index.js            # Interactive navigation and menu functionality
+├── style.scss          # SASS source for semantic CSS theme
+├── style.css           # Compiled semantic CSS theme (generated from style.scss)
+├── package.json        # Project configuration and npm scripts
+├── LICENCE             # Project license
 └── README.md           # This file
-```
-
-## Files
-
-### `style.css`
-The core branding stylesheet containing:
+```scss`
+The source SASS stylesheet that compiles to `style.css`, containing:
 - CSS custom property definitions for colors, typography, and spacing
 - Semantic styling for all HTML elements (headings, paragraphs, lists, tables, forms, etc.)
 - CSS reset and base styles
 - Responsive design utilities
+
+### `style.css`
+The compiled CSS stylesheet (auto-generated from `style.scss`). Include this in your projects.
 
 ### `index.html`
 A comprehensive showcase page demonstrating:
@@ -53,9 +58,39 @@ A comprehensive showcase page demonstrating:
 - Tables
 - Forms and form elements
 - Blockquotes and semantic elements
-- Navigation structure
+- Responsive navigation with mobile menu
+
+### `index.js`
+JavInstallation
+
+### Prerequisites
+- Node.js and npm installed on your system
+- Basic command line knowledge
+
+### Setup
+
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
 ## Getting Started
+
+### Development Workflow
+
+To work on the SASS stylesheets with automatic compilation:
+
+```bash
+npm run watch
+```
+
+This command monitors `style.scss` for changes and automatically compiles to `style.css`.
+
+To do a one-time build:
+
+```bash
+npm run build
+```
 
 ### Using This Theme
 
@@ -81,6 +116,16 @@ A comprehensive showcase page demonstrating:
    ```
 
 4. **Customize with CSS variables**: Override colors and typography in your own CSS:
+   ```css
+   :root {
+     --fs-color-primary: #customcolor;
+     --fs-font-size-base: 18px;
+   }
+   ```
+
+### Viewing the Showcase
+
+Open `index.html` in a web browser to see all styled elements in action, including the interactive mobile navigation menuyour own CSS:
    ```css
    :root {
      --fs-color-primary: #customcolor;
