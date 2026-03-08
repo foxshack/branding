@@ -262,6 +262,9 @@ header {
   background-color: var(--fs-color-accent1-dark);
   color: var(--fs-color-text-light);
   padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
@@ -279,14 +282,12 @@ header a:hover {
 
 header div {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (min-width: 900px) {
   header div {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
@@ -298,6 +299,17 @@ header a.brand {
 
 header button {
   display: block;
+  background-color: var(--fs-color-accent2);
+  color: var(--fs-color-text-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+header button:hover {
+  background-color: var(--fs-color-accent2-dark);
 }
 @media (min-width: 900px) {
   header button {
@@ -309,16 +321,41 @@ header nav {
   background-color: var(--fs-color-accent1-dark);
   position: absolute;
   top: 0;
-  left: 0;
+  left: -260px;
   width: 250px;
   height: 100vh;
   box-shadow: 5px 0 5px rgba(0, 0, 0, 0.4);
+  transition: left 0.3s ease;
+}
+header nav.active {
+  left: 0;
 }
 @media (min-width: 900px) {
   header nav {
     position: relative;
+    left: 0;
     width: auto;
     height: auto;
+    transition: none;
+  }
+}
+header nav .nav-close {
+  display: block;
+  background: transparent;
+  border: none;
+  color: var(--fs-color-text-light);
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  float: right;
+  transition: color 0.2s ease;
+}
+header nav .nav-close:hover {
+  color: var(--fs-color-accent2);
+}
+@media (min-width: 900px) {
+  header nav .nav-close {
+    display: none;
   }
 }
 header nav ul,
@@ -326,8 +363,8 @@ header nav ol {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 0;
-  gap: 1rem;
+  padding: 1rem 0;
+  gap: 0;
   margin: 0;
   flex-wrap: wrap;
 }
@@ -335,16 +372,31 @@ header nav ol {
   header nav ul,
   header nav ol {
     flex-direction: row;
+    padding: 0;
+    gap: 1rem;
   }
 }
 header nav ul li {
   margin: 0;
 }
+@media (min-width: 900px) {
+  header nav ul li {
+    margin: 0;
+  }
+}
 header nav a {
   color: var(--fs-color-text-light);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  border-radius: 0;
   transition: background-color 0.2s ease;
+  display: block;
+}
+@media (min-width: 900px) {
+  header nav a {
+    border-radius: 4px;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
 }
 header nav a:hover, header nav a:focus, header nav a:active, header nav a:visited {
   color: var(--fs-color-text-light);
