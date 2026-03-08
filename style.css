@@ -337,6 +337,7 @@ header nav.active {
     width: auto;
     height: auto;
     transition: none;
+    box-shadow: none;
   }
 }
 header nav .nav-close {
