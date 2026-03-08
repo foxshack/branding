@@ -9,28 +9,25 @@
 <body>
   <header>
     <div class="container">
-      <h1>Foxshack Branding</h1>
-      <p>A semantic CSS theme showcase</p>
+      <a class="brand" href="/">Foxshack Branding</a>
+      <nav>
+        <div class="container">
+          <ul>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#forms">Forms</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="#typography">Typography</a></li>
-        <li><a href="#lists">Lists</a></li>
-        <li><a href="#code">Code</a></li>
-        <li><a href="#tables">Tables</a></li>
-        <li><a href="#forms">Forms</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <main>
     <article>
-      <h2>Welcome to Semantic Styling</h2>
+      <h1>Welcome to Semantic Styling</h1>
       <p>This page demonstrates a <strong>comprehensive semantic CSS theme</strong> built with your brand colors: <em>Solar Clay</em>, <em>Mineral Grey</em>, and <em>Verdant Lime</em>. Every HTML element is styled based on its <mark>semantic meaning</mark>, not arbitrary classes.</p>
-      
       <aside>
         <h3>What's Semantic CSS?</h3>
         <p>Semantic CSS means styling HTML elements directly so that your markup structure conveys meaning without needing class names. This approach keeps HTML cleaner and CSS more maintainable.</p>
@@ -247,8 +244,10 @@
             <option value="high">High</option>
           </select>
 
-          <button type="submit">Send Message</button>
-          <button type="reset">Clear Form</button>
+          <footer>
+            <button type="submit">Send Message</button>
+            <button type="reset">Clear Form</button>
+          </footer>
         </form>
       </article>
     </section>
@@ -300,13 +299,15 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 <a href="https://github.com/foxshack">Foxshack</a>. All rights reserved.</p>
-    <p>
-      <a href="#">Home</a> •
-      <a href="#">About</a> •
-      <a href="#">Contact</a> •
-      <a href="#">Privacy</a>
-    </p>
+    <div class="container">
+      <p>&copy; 2026 <a href="https://github.com/foxshack">Foxshack</a>. All rights reserved.</p>
+      <p>
+        <a href="#">Home</a> •
+        <a href="#">About</a> •
+        <a href="#">Contact</a> •
+        <a href="#">Privacy</a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>

@@ -4,7 +4,7 @@
   "description": "Foxshack branding website",
   "scripts": {
     "build": "sass style.scss style.css",
-    "watch": "sass --watch . --output ."
+    "watch": "sass --watch style.scss:style.css"
   },
   "keywords": [],
   "author": "",
