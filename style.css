@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 :root {
   /* Base colours */
   
@@ -38,6 +38,7 @@
   /* Typography */
   --fs-font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --fs-font-family-serif: "Georgia", "Times New Roman", Times, serif;
+  --fs-font-family-cursive: "Coming Soon", cursive, serif;
   --fs-font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   --fs-font-size-base: 16px;
   --fs-line-height-base: 1.6;
@@ -82,7 +83,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--fs-font-family-serif);
+  font-family: var(--fs-font-family-cursive);
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
   margin-bottom: 1rem;
