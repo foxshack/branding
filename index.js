@@ -6,9 +6,24 @@ const closeNav = () => {
   nav.classList.remove('active');
 };
 
+const openNav = () => {
+
+  requestAnimationFrame(() => {
+    nav.style.display = '';
+  });
+
+  requestAnimationFrame(() => {
+    nav.classList.add('active');
+  });
+};
+
 // Toggle nav on menu button click
 menuButton.addEventListener('click', () => {
-  nav.classList.toggle('active');
+  if (nav.classList.contains('active')) {
+    closeNav();
+  } else {
+    openNav();
+  }
 });
 
 // Close nav on close button click
@@ -27,5 +42,14 @@ nav.querySelectorAll('a:not(.nav-close)').forEach(link => {
 document.addEventListener('click', (e) => {
   if (!e.target.closest('header')) {
     closeNav();
+  }
+});
+
+nav.addEventListener('transitionend', () => {
+  console.log('Transition ended, updating display');
+  if (!nav.classList.contains('active')) {
+    nav.style.display = 'none';
+  } else {
+    nav.style.display = '';
   }
 });
