@@ -6,11 +6,14 @@ const closeNav = () => {
   nav.classList.remove('active');
 };
 
-const openNav = () => {
+nav.addEventListener('animationend', () => {
+  if (!nav.classList.contains('active')) {
+    nav.classList.add('hidden');
+  }
+});
 
-  requestAnimationFrame(() => {
-    nav.style.display = '';
-  });
+const openNav = () => {
+  nav.classList.remove('hidden');
 
   requestAnimationFrame(() => {
     nav.classList.add('active');
@@ -45,11 +48,12 @@ document.addEventListener('click', (e) => {
   }
 });
 
-nav.addEventListener('transitionend', () => {
-  console.log('Transition ended, updating display');
-  if (!nav.classList.contains('active')) {
-    nav.style.display = 'none';
-  } else {
-    nav.style.display = '';
-  }
+// nav.addEventListener('transitionend', () => {
+//   console.log('Transition ended');
+// });
+
+window.addEventListener('load', () => {
+  console.log('Page fully loaded, ensuring nav is shown');
+  // Ensure nav is hidden on load
+  nav.classList.remove('hidden');
 });
