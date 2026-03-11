@@ -3,7 +3,12 @@ const nav = document.querySelector('header nav');
 const closeButton = document.querySelector('.nav-close');
 
 const closeNav = () => {
+  nav.style.right = '-310px'; // Move nav off-screen
   nav.classList.remove('active');
+  setTimeout(() => {
+    nav.style.visibility = 'hidden'; // Hide nav after animation completes
+  }, 300);
+
 };
 
 nav.addEventListener('animationend', () => {
@@ -13,9 +18,9 @@ nav.addEventListener('animationend', () => {
 });
 
 const openNav = () => {
-  requestAnimationFrame(() => {
-    nav.classList.add('active');
-  });
+  nav.style.visibility = 'visible'; // Ensure nav is visible before animation
+  nav.style.right = '0px'; // Move nav off-screen
+  nav.classList.add('active');
 };
 
 // Toggle nav on menu button click
@@ -46,12 +51,24 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// nav.addEventListener('transitionend', () => {
-//   console.log('Transition ended');
-// });
+const throttle = (func, limit) => {
+  let inThrottle;
+  return () => {
+    if (!inThrottle) {
+      func();
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+};
 
-window.addEventListener('load', () => {
-  console.log('Page fully loaded, ensuring nav is shown');
-  // Ensure nav is hidden on load
-  nav.classList.remove('shifted');
-});
+const handleResize = () => {
+  if (window.innerWidth > 900) {
+    nav.style.visibility = 'visible';
+  } else {
+    nav.style.visibility = 'hidden';
+    nav.classList.remove('active');
+  }
+};
+
+window.addEventListener('resize', throttle(handleResize, 50));

@@ -57,6 +57,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main, .container {
@@ -318,47 +319,15 @@ header button:hover {
   }
 }
 
-@keyframes slideIn {
-  0% {
-    visibility: visible;
-    right: -310px;
-  }
-  1% {
-    right: -310px;
-  }
-  100% {
-    right: 0;
-  }
-}
-@keyframes slideOut {
-  1% {
-    right: 0;
-  }
-  99% {
-    right: -310px;
-  }
-  100% {
-    visibility: hidden;
-    right: -310px;
-  }
-}
-.shifted {
-  transform: translate(100%);
-}
-
 header nav {
   background-color: var(--fs-color-accent1-dark);
   position: absolute;
   top: 0;
+  right: -310px;
   width: 300px;
   height: 100vh;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease;
-  animation: slideOut 0.3s ease forwards;
-}
-header nav.active {
-  right: 0;
-  animation: slideIn 0.3s ease forwards;
 }
 @media (min-width: 900px) {
   header nav {
