@@ -2,13 +2,16 @@ const menuButton = document.querySelector('header button:not(.nav-close)');
 const nav = document.querySelector('header nav');
 const closeButton = document.querySelector('.nav-close');
 
-const closeNav = () => {
-  nav.style.right = '-310px'; // Move nav off-screen
-  nav.classList.remove('active');
-  setTimeout(() => {
-    nav.style.visibility = 'hidden'; // Hide nav after animation completes
-  }, 300);
+const isMobile = () => window.innerWidth <= 900;
 
+const closeNav = () => {
+  if (isMobile()) {
+    nav.style.right = '-310px'; // Move nav off-screen
+    nav.classList.remove('active');
+    setTimeout(() => {
+        nav.style.visibility = 'hidden'; // Hide nav after animation completes
+    }, 300);
+  }
 };
 
 nav.addEventListener('animationend', () => {
