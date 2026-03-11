@@ -83,3 +83,6 @@ const handleResize = () => {
 };
 
 window.addEventListener('resize', throttle(handleResize, 50));
+
+window.addEventListener('load', handleResize);
+window.addEventListener('orientationchange', handleResize);

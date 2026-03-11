@@ -343,6 +343,7 @@ header {
     height: 100vh;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
+    visibility: hidden;
 
     @media (min-width: 900px) {
       position: relative;
