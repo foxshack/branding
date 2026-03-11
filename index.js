@@ -10,22 +10,26 @@ const closeNav = () => {
     nav.classList.remove('active');
     // document.body.style.overflow = ''; // Re-enable body scrolling
     setTimeout(() => {
+        nav.style.width = '0'; // Reset width after animation
         nav.style.visibility = 'hidden'; // Hide nav after animation completes
     }, 300);
   }
 };
 
-nav.addEventListener('animationend', () => {
-  if (!nav.classList.contains('active')) {
-    nav.classList.add('hidden');
-  }
-});
+// nav.addEventListener('animationend', () => {
+//   if (!nav.classList.contains('active')) {
+//     nav.classList.add('hidden');
+//   }
+// });
 
 const openNav = () => {
-  nav.style.visibility = 'visible'; // Ensure nav is visible before animation
-  nav.style.right = '0px'; // Move nav on-screen
-  nav.classList.add('active');
-  // document.body.style.overflow = 'hidden'; // Prevent body scrolling when menu is open
+  if (isMobile()) {
+    nav.style.width='300px'; // Ensure nav has width for animation
+    nav.style.visibility = 'visible'; // Ensure nav is visible before animation
+    nav.style.right = '0px'; // Move nav on-screen
+    nav.classList.add('active');
+    // document.body.style.overflow = 'hidden'; // Prevent body scrolling when menu is open
+  }
 };
 
 // Toggle nav on menu button click
@@ -70,6 +74,8 @@ const throttle = (func, limit) => {
 const handleResize = () => {
   if (window.innerWidth > 900) {
     nav.style.visibility = 'visible';
+    nav.style.width='unset'; // Ensure nav has width for animation
+    nav.style.right = '0px'; // Move nav on-screen
   } else {
     nav.style.visibility = 'hidden';
     nav.classList.remove('active');
