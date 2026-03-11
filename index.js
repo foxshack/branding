@@ -8,7 +8,7 @@ const closeNav = () => {
   if (isMobile()) {
     nav.style.right = '-310px'; // Move nav off-screen
     nav.classList.remove('active');
-    document.body.style.overflow = ''; // Re-enable body scrolling
+    // document.body.style.overflow = ''; // Re-enable body scrolling
     setTimeout(() => {
         nav.style.visibility = 'hidden'; // Hide nav after animation completes
     }, 300);
@@ -25,7 +25,7 @@ const openNav = () => {
   nav.style.visibility = 'visible'; // Ensure nav is visible before animation
   nav.style.right = '0px'; // Move nav on-screen
   nav.classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent body scrolling when menu is open
+  // document.body.style.overflow = 'hidden'; // Prevent body scrolling when menu is open
 };
 
 // Toggle nav on menu button click
