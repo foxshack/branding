@@ -65,6 +65,7 @@ html {
   line-height: var(--fs-line-height-base);
   color: var(--fs-color-text);
   background-color: var(--fs-color-background);
+  overflow-x: hidden;
 }
 
 body {
@@ -335,7 +336,7 @@ header button {
 header {
   nav {
     background-color: var(--fs-color-accent1-dark);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -310px;
     width: 300px;
