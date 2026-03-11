@@ -71,7 +71,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 main, .container {
@@ -335,27 +335,37 @@ header button {
 @keyframes slideIn {
   0% {
     visibility: visible;
-    transform: translateX(110%);
+    right: -310px;
+    // transform: translateX(110%);
   }
   1% {
-    transform: translateX(110%);
+    right: -310px;
+    // transform: translateX(110%);
   }
   100% {
-    transform: translateX(0);
+    right: 0;
+    // transform: translateX(0);
   }
 }
 
 @keyframes slideOut {
   1% {
-    transform: translateX(0);
+    right: 0;
+    // transform: translateX(0);
   }
   99% {
-    transform: translateX(110%);
+    right: -310px;
+    // transform: translateX(110%);
   }
   100% {
     visibility: hidden;
+    right: -310px;
     // transform: translateX(110%);
   } 
+}
+
+.shifted {
+  transform: translate(100%);
 }
 
 header {
@@ -363,7 +373,7 @@ header {
     background-color: var(--fs-color-accent1-dark);
     position: absolute;
     top: 0;
-    right: -350px;
+    // right: -350px;
     // right: -310px;
     width: 300px;
     height: 100vh;
@@ -454,9 +464,9 @@ header {
   }
 }
 
-.hidden {
-  visibility: hidden;
-}
+// .hidden {
+//   visibility: hidden;
+// }
 
 article {
   margin-bottom: 2rem;

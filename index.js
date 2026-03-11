@@ -13,8 +13,6 @@ nav.addEventListener('animationend', () => {
 });
 
 const openNav = () => {
-  nav.classList.remove('hidden');
-
   requestAnimationFrame(() => {
     nav.classList.add('active');
   });
@@ -55,5 +53,5 @@ document.addEventListener('click', (e) => {
 window.addEventListener('load', () => {
   console.log('Page fully loaded, ensuring nav is shown');
   // Ensure nav is hidden on load
-  nav.classList.remove('hidden');
+  nav.classList.remove('shifted');
 });
