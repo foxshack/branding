@@ -3,49 +3,49 @@
   /* Base colours and numeric scale variants */
   --fs-color-primary-50: #986f11;
   --fs-color-primary: #986f11;
-  --fs-color-primary-20: rgb(244.7, 240.6, 231.2);
-  --fs-color-primary-30: rgb(213.8, 197.4, 159.8);
-  --fs-color-primary-40: rgb(182.9, 154.2, 88.4);
-  --fs-color-primary-60: rgb(106.4, 77.7, 11.9);
-  --fs-color-primary-70: rgb(60.8, 44.4, 6.8);
-  --fs-color-primary-80: rgb(15.2, 11.1, 1.7);
+  --fs-color-primary-20: color-mix(in oklch, #fff 80%, #986f11);
+  --fs-color-primary-30: color-mix(in oklch, #fff 60%, #986f11);
+  --fs-color-primary-40: color-mix(in oklch, #fff 30%, #986f11);
+  --fs-color-primary-60: color-mix(in oklch, #000 20%, #986f11);
+  --fs-color-primary-70: color-mix(in oklch, #000 35%, #986f11);
+  --fs-color-primary-80: color-mix(in oklch, #000 50%, #986f11);
   --fs-color-secondary-50: #d96e3c;
   --fs-color-secondary: #d96e3c;
-  --fs-color-secondary-20: rgb(251.2, 240.5, 235.5);
-  --fs-color-secondary-30: rgb(239.8, 197, 177);
-  --fs-color-secondary-40: rgb(228.4, 153.5, 118.5);
-  --fs-color-secondary-60: rgb(151.9, 77, 42);
-  --fs-color-secondary-70: rgb(86.8, 44, 24);
-  --fs-color-secondary-80: rgb(21.7, 11, 6);
+  --fs-color-secondary-20: color-mix(in oklch, #fff 80%, #d96e3c);
+  --fs-color-secondary-30: color-mix(in oklch, #fff 60%, #d96e3c);
+  --fs-color-secondary-40: color-mix(in oklch, #fff 30%, #d96e3c);
+  --fs-color-secondary-60: color-mix(in oklch, #000 20%, #d96e3c);
+  --fs-color-secondary-70: color-mix(in oklch, #000 35%, #d96e3c);
+  --fs-color-secondary-80: color-mix(in oklch, #000 50%, #d96e3c);
   --fs-color-tertiary-50: #8BBF2F;
   --fs-color-tertiary: #8BBF2F;
-  --fs-color-tertiary-20: rgb(243.4, 248.6, 234.2);
-  --fs-color-tertiary-30: rgb(208.6, 229.4, 171.8);
-  --fs-color-tertiary-40: rgb(173.8, 210.2, 109.4);
-  --fs-color-tertiary-60: rgb(97.3, 133.7, 32.9);
-  --fs-color-tertiary-70: rgb(55.6, 76.4, 18.8);
-  --fs-color-tertiary-80: rgb(13.9, 19.1, 4.7);
+  --fs-color-tertiary-20: color-mix(in oklch, #fff 80%, #8BBF2F);
+  --fs-color-tertiary-30: color-mix(in oklch, #fff 60%, #8BBF2F);
+  --fs-color-tertiary-40: color-mix(in oklch, #fff 30%, #8BBF2F);
+  --fs-color-tertiary-60: color-mix(in oklch, #000 20%, #8BBF2F);
+  --fs-color-tertiary-70: color-mix(in oklch, #000 35%, #8BBF2F);
+  --fs-color-tertiary-80: color-mix(in oklch, #000 50%, #8BBF2F);
   /* Grey variants */
-  --fs-color-grey-50: #5a5a5a;
-  --fs-color-grey: #5a5a5a;
-  --fs-color-grey-20: rgb(238.5, 238.5, 238.5);
-  --fs-color-grey-30: #bdbdbd;
-  --fs-color-grey-40: rgb(139.5, 139.5, 139.5);
-  --fs-color-grey-60: #3f3f3f;
-  --fs-color-grey-70: #242424;
-  --fs-color-grey-80: #090909;
+  --fs-color-grey-50: #696969;
+  --fs-color-grey: #696969;
+  --fs-color-grey-20: color-mix(in oklch, #fff 80%, #696969);
+  --fs-color-grey-30: color-mix(in oklch, #fff 60%, #696969);
+  --fs-color-grey-40: color-mix(in oklch, #fff 30%, #696969);
+  --fs-color-grey-60: color-mix(in oklch, #000 20%, #696969);
+  --fs-color-grey-70: color-mix(in oklch, #000 35%, #696969);
+  --fs-color-grey-80: color-mix(in oklch, #000 50%, #696969);
   /* Semantic colour tokens */
   --fs-color-text: var(--fs-color-grey-70);
   --fs-color-text-muted: var(--fs-color-grey-50);
-  --fs-color-background: #FFFFFF;
-  --fs-color-text-light: #FFFFFF;
+  --fs-color-background: #fff;
+  --fs-color-text-light: #fff;
   --fs-color-border: var(--fs-color-grey-30);
   --fs-color-link: var(--fs-color-tertiary-50);
   --fs-color-link-hover: var(--fs-color-tertiary-60);
   --fs-color-link-visited: var(--fs-color-tertiary-70);
   /* Typography */
   --fs-font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --fs-font-family-serif: "Protest Riot", "Georgia", "Times New Roman", Times, serif;
+  --fs-font-family-serif: "Georgia", "Times New Roman", Times, serif;
   --fs-font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
   --fs-font-size-base: 16px;
   --fs-line-height-base: 1.6;
@@ -795,6 +795,41 @@ figcaption {
 
 .text-tertiary-80 {
   color: var(--fs-color-tertiary-80);
+}
+
+/* Color Grid */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.color-swatch {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 1px solid var(--fs-color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-swatch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-label {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
