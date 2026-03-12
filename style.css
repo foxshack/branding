@@ -41,7 +41,7 @@
   --fs-color-text-light: #fff;
   --fs-color-border: var(--fs-color-grey-30);
   --fs-color-link: var(--fs-color-tertiary-60);
-  --fs-color-link-hover: var(--fs-color-tertiary-70);
+  --fs-color-link-hover: color-mix(in oklch, #000 20%, var(--fs-color-link));
   /* Typography */
   --fs-font-family-sans: -apple-system,
   BlinkMacSystemFont,
@@ -71,8 +71,8 @@
   --fs-line-height-base: 1.6;
   --fs-line-height-tight: 1.2;
   /* Additional tokens can be added here as needed */
-  --fs-button-bg: var(--fs-color-tertiary-60);
-  --fs-button-hover-bg: var(--fs-color-tertiary-70);
+  --fs-button-bg: var(--fs-color-tertiary-70);
+  --fs-button-hover-bg: color-mix(in oklch, #000 20%, var(--fs-button-bg));
   --fs-border-radius: 4px;
 }
 
@@ -347,7 +347,7 @@ header button {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
-header button:hover {
+header button:hover, header button:focus, header button:active {
   background-color: var(--fs-button-hover-bg);
 }
 @media (min-width: 900px) {
