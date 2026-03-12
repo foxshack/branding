@@ -1,55 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap");
 :root {
   /* Base colours and numeric scale variants */
-  --fs-color-primary-50: #986f11;
-  --fs-color-primary: #986f11;
-  --fs-color-primary-20: color-mix(in oklch, #fff 80%, #986f11);
-  --fs-color-primary-30: color-mix(in oklch, #fff 60%, #986f11);
-  --fs-color-primary-40: color-mix(in oklch, #fff 30%, #986f11);
-  --fs-color-primary-60: color-mix(in oklch, #000 20%, #986f11);
-  --fs-color-primary-70: color-mix(in oklch, #000 35%, #986f11);
-  --fs-color-primary-80: color-mix(in oklch, #000 50%, #986f11);
-  --fs-color-secondary-50: #d96e3c;
-  --fs-color-secondary: #d96e3c;
-  --fs-color-secondary-20: color-mix(in oklch, #fff 80%, #d96e3c);
-  --fs-color-secondary-30: color-mix(in oklch, #fff 60%, #d96e3c);
-  --fs-color-secondary-40: color-mix(in oklch, #fff 30%, #d96e3c);
-  --fs-color-secondary-60: color-mix(in oklch, #000 20%, #d96e3c);
-  --fs-color-secondary-70: color-mix(in oklch, #000 35%, #d96e3c);
-  --fs-color-secondary-80: color-mix(in oklch, #000 50%, #d96e3c);
-  --fs-color-tertiary-50: #8BBF2F;
-  --fs-color-tertiary: #8BBF2F;
-  --fs-color-tertiary-20: color-mix(in oklch, #fff 80%, #8BBF2F);
-  --fs-color-tertiary-30: color-mix(in oklch, #fff 60%, #8BBF2F);
-  --fs-color-tertiary-40: color-mix(in oklch, #fff 30%, #8BBF2F);
-  --fs-color-tertiary-60: color-mix(in oklch, #000 20%, #8BBF2F);
-  --fs-color-tertiary-70: color-mix(in oklch, #000 35%, #8BBF2F);
-  --fs-color-tertiary-80: color-mix(in oklch, #000 50%, #8BBF2F);
+  --fs-color-primary: #2d6f8a;
+  --fs-color-primary-50: var(--fs-color-primary);
+  --fs-color-primary-20: color-mix(in oklch, #fff 85%, var(--fs-color-primary));
+  --fs-color-primary-30: color-mix(in oklch, #fff 60%, var(--fs-color-primary));
+  --fs-color-primary-40: color-mix(in oklch, #fff 30%, var(--fs-color-primary));
+  --fs-color-primary-60: color-mix(in oklch, #000 20%, var(--fs-color-primary));
+  --fs-color-primary-70: color-mix(in oklch, #000 35%, var(--fs-color-primary));
+  --fs-color-primary-80: color-mix(in oklch, #000 50%, var(--fs-color-primary));
+  --fs-color-secondary: #99316f;
+  --fs-color-secondary-50: var(--fs-color-secondary);
+  --fs-color-secondary-20: color-mix(in oklch, #fff 85%, var(--fs-color-secondary));
+  --fs-color-secondary-30: color-mix(in oklch, #fff 60%, var(--fs-color-secondary));
+  --fs-color-secondary-40: color-mix(in oklch, #fff 30%, var(--fs-color-secondary));
+  --fs-color-secondary-60: color-mix(in oklch, #000 20%, var(--fs-color-secondary));
+  --fs-color-secondary-70: color-mix(in oklch, #000 35%, var(--fs-color-secondary));
+  --fs-color-secondary-80: color-mix(in oklch, #000 50%, var(--fs-color-secondary));
+  --fs-color-tertiary: #a7c029;
+  --fs-color-tertiary-50: var(--fs-color-tertiary);
+  --fs-color-tertiary-20: color-mix(in oklch, #fff 85%, var(--fs-color-tertiary));
+  --fs-color-tertiary-30: color-mix(in oklch, #fff 60%, var(--fs-color-tertiary));
+  --fs-color-tertiary-40: color-mix(in oklch, #fff 30%, var(--fs-color-tertiary));
+  --fs-color-tertiary-60: color-mix(in oklch, #000 20%, var(--fs-color-tertiary));
+  --fs-color-tertiary-70: color-mix(in oklch, #000 35%, var(--fs-color-tertiary));
+  --fs-color-tertiary-80: color-mix(in oklch, #000 50%, var(--fs-color-tertiary));
   /* Grey variants */
-  --fs-color-grey-50: #696969;
-  --fs-color-grey: #696969;
-  --fs-color-grey-20: color-mix(in oklch, #fff 80%, #696969);
-  --fs-color-grey-30: color-mix(in oklch, #fff 60%, #696969);
-  --fs-color-grey-40: color-mix(in oklch, #fff 30%, #696969);
-  --fs-color-grey-60: color-mix(in oklch, #000 20%, #696969);
-  --fs-color-grey-70: color-mix(in oklch, #000 35%, #696969);
-  --fs-color-grey-80: color-mix(in oklch, #000 50%, #696969);
+  --fs-color-grey: #727272;
+  --fs-color-grey-50: var(--fs-color-grey);
+  --fs-color-grey-20: color-mix(in oklch, #fff 85%, var(--fs-color-grey));
+  --fs-color-grey-30: color-mix(in oklch, #fff 60%, var(--fs-color-grey));
+  --fs-color-grey-40: color-mix(in oklch, #fff 30%, var(--fs-color-grey));
+  --fs-color-grey-60: color-mix(in oklch, #000 20%, var(--fs-color-grey));
+  --fs-color-grey-70: color-mix(in oklch, #000 35%, var(--fs-color-grey));
+  --fs-color-grey-80: color-mix(in oklch, #000 50%, var(--fs-color-grey));
   /* Semantic colour tokens */
   --fs-color-text: var(--fs-color-grey-70);
   --fs-color-text-muted: var(--fs-color-grey-50);
   --fs-color-background: #fff;
   --fs-color-text-light: #fff;
   --fs-color-border: var(--fs-color-grey-30);
-  --fs-color-link: var(--fs-color-tertiary-50);
-  --fs-color-link-hover: var(--fs-color-tertiary-60);
-  --fs-color-link-visited: var(--fs-color-tertiary-70);
+  --fs-color-link: var(--fs-color-tertiary-60);
+  --fs-color-link-hover: var(--fs-color-tertiary-70);
   /* Typography */
-  --fs-font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --fs-font-family-serif: "Georgia", "Times New Roman", Times, serif;
-  --fs-font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  --fs-font-family-sans: -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif;
+  --fs-font-family-serif: "Libre Baskerville",
+  "Georgia",
+  "Times New Roman",
+  Times,
+  serif;
+  --fs-font-family-mono: "SF Mono",
+  Monaco,
+  "Cascadia Code",
+  "Roboto Mono",
+  Consolas,
+  "Courier New",
+  monospace;
+  --fs-font-family-headings: var(--fs-font-family-serif);
   --fs-font-size-base: 16px;
   --fs-line-height-base: 1.6;
   --fs-line-height-tight: 1.2;
+  /* Additional tokens can be added here as needed */
+  --fs-button-bg: var(--fs-color-tertiary-60);
+  --fs-button-hover-bg: var(--fs-color-tertiary-70);
+  --fs-border-radius: 4px;
 }
 
 /* CSS Reset */
@@ -76,7 +100,8 @@ body {
   overflow-x: hidden;
 }
 
-main, .container {
+main,
+.container {
   max-width: 1200px;
   margin: auto;
   padding: 0 1rem;
@@ -93,7 +118,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--fs-font-family-serif);
+  font-family: var(--fs-font-family-headings);
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
   margin-bottom: 1rem;
@@ -176,12 +201,8 @@ a:hover {
   border-bottom-color: var(--fs-color-link-hover);
 }
 
-a:visited {
-  color: var(--fs-color-link-visited);
-}
-
 a:active {
-  color: var(--fs-color-primary-darker);
+  color: var(--fs-color-link-hover);
 }
 
 /* Code & Pre */
@@ -191,7 +212,7 @@ pre {
   background-color: var(--fs-color-grey-20);
   color: var(--fs-color-grey-70);
   border: 1px solid var(--fs-color-border);
-  border-radius: 4px;
+  border-radius: var(--fs-border-radius);
 }
 
 code {
@@ -310,24 +331,24 @@ header div {
 }
 
 header a.brand {
-  font-family: var(--fs-font-family-serif);
+  font-family: var(--fs-font-family-headings);
   font-size: 1.5rem;
   color: var(--fs-color-text-light);
 }
 
 header button {
   display: block;
-  background-color: var(--fs-color-tertiary-50);
+  background-color: var(--fs-button-bg);
   color: var(--fs-color-text-light);
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: var(--fs-border-radius);
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 header button:hover {
-  background-color: var(--fs-color-tertiary-60);
+  background-color: var(--fs-button-hover-bg);
 }
 @media (min-width: 900px) {
   header button {
@@ -412,12 +433,15 @@ header nav a {
 }
 @media (min-width: 900px) {
   header nav a {
-    border-radius: 4px;
+    border-radius: var(--fs-border-radius);
     display: inline-block;
     padding: 0.5rem 1rem;
   }
 }
-header nav a:hover, header nav a:focus, header nav a:active, header nav a:visited {
+header nav a:hover,
+header nav a:focus,
+header nav a:active,
+header nav a:visited {
   color: var(--fs-color-text-light);
   background-color: var(--fs-color-grey-50);
   border-bottom-color: transparent;
@@ -446,7 +470,7 @@ aside {
   padding: 1rem;
   margin-bottom: 1rem;
   border-left: 4px solid var(--fs-color-tertiary-50);
-  border-radius: 4px;
+  border-radius: var(--fs-border-radius);
 }
 
 aside h3 {
@@ -468,7 +492,10 @@ body > footer {
 body > footer a {
   color: var(--fs-color-tertiary-20);
 }
-body > footer a:hover, body > footer a:focus, body > footer a:active, body > footer a:visited {
+body > footer a:hover,
+body > footer a:focus,
+body > footer a:active,
+body > footer a:visited {
   color: var(--fs-color-tertiary-20);
 }
 
@@ -509,7 +536,7 @@ form {
   padding: 1rem;
   background-color: var(--fs-color-grey-20);
   border: 1px solid var(--fs-color-border);
-  border-radius: 4px;
+  border-radius: var(--fs-border-radius);
 }
 
 input,
@@ -520,7 +547,7 @@ select {
   line-height: inherit;
   padding: 0.5rem;
   border: 1px solid var(--fs-color-border);
-  border-radius: 4px;
+  border-radius: var(--fs-border-radius);
   transition: border-color 0.2s ease;
   width: 100%;
   max-width: 100%;
@@ -572,15 +599,17 @@ button {
   font-size: inherit;
   font-weight: 600;
   border: none;
-  border-radius: 4px;
-  background-color: var(--fs-color-tertiary-50);
+  border-radius: var(--fs-border-radius);
+  background-color: var(--fs-button-bg);
   color: var(--fs-color-text-light);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-button:hover, button:focus, button:active {
-  background-color: var(--fs-color-tertiary-60);
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--fs-button-hover-bg);
 }
 
 /* Media */
@@ -827,7 +856,7 @@ figcaption {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 0.25rem 0.75rem;
-  border-radius: 4px;
+  border-radius: var(--fs-border-radius);
   font-size: 0.875rem;
   font-weight: 600;
 }
