@@ -16,17 +16,23 @@ A **semantic CSS theme** that provides a unified look and feel across projects. 
 
 The Foxshack branding system features three primary colors:
 
-| Color Name | Color Code | Hex Value | Purpose |
-|------------|-----------|-----------|---------|
-| **Solar Clay** | Primary | `#D96E3C` | Main brand color; used for emphasis and key elements |
-| **Mineral Grey** | Accent 1 | `#6A6A6A` | Neutral accent; backgrounds and muted text |
-| **Verdant Lime** | Accent 2 | `#8BBF2F` | Success and callout color; links and highlights |
+Primary, Secondary and Tertiary colors, each generating a numeric scale of variants (20–80) for depth and visual hierarchy. A base value (50) represents the full color, with lighter variants (20–40) and darker variants (60–80).
 
-Each color includes tints (lighter) and shades (darker) for depth and visual hierarchy:
-- **Lighter**: 40% tint
-- **Light**: 20% tint
-- **Dark**: 20% shade
-- **Darker**: 40% shade
+### Color Scale
+- **20**: 85% tint (lightest)
+- **30**: 60% tint
+- **40**: 30% tint
+- **50**: Base color (no mixing)
+- **60**: 20% shade (dark)
+- **70**: 35% shade
+- **80**: 50% shade (darkest)
+
+### Utility Classes
+Use `.bg-{color}-{scale}` and `.text-{color}-{scale}` classes for quick styling:
+- **Background**: `.bg-primary-40`, `.bg-secondary-60`, `.bg-tertiary-20`, etc.
+- **Text Color**: `.text-primary-40`, `.text-secondary-60`, `.text-tertiary-20`, etc.
+- **Colors**: `primary`, `secondary`, `tertiary`, and `grey` (neutral)
+- **Default scales**: 20, 30, 40, 50, 60, 70, and 80
 
 ## Project Structure
 
@@ -165,8 +171,10 @@ The theme is built on CSS custom properties, making it easy to customize:
 
 ```css
 :root {
-  /* Change primary color */
+  /* Override initial colours */
   --fs-color-primary: #YourColor;
+  --fs-color-secondary: #YourColor;
+  --fs-color-tertiary: #YourColor;
   
   /* Adjust typography */
   --fs-font-size-base: 18px;

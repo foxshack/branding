@@ -97,7 +97,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 main,
@@ -294,6 +293,9 @@ hr {
 
 body > header {
   margin-bottom: initial;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* Semantic Sections */
@@ -301,31 +303,23 @@ header {
   background-color: var(--fs-color-grey-60);
   color: var(--fs-color-text-light);
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-header h1 {
-  color: var(--fs-color-text-light);
-  margin-top: 0;
 }
 
 header a {
-  color: var(--fs-color-tertiary-30);
+  color: var(--fs-color-tertiary-20);
 }
 
 header a:hover {
   color: var(--fs-color-tertiary-20);
 }
 
-header div {
+body > header > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (min-width: 900px) {
-  header div {
+  body > header > div {
     flex-direction: row;
   }
 }
