@@ -41,62 +41,114 @@ $options: (
 
 /* Background Utilities */
 .bg-primary {
-  background-color: var(--fs-color-primary-50);
+  background-color: var(--fs-color-primary-50) !important;
 }
 
 @each $option in $options {
   .bg-primary-#{$option} {
-    background-color: var(--fs-color-primary-#{$option});
+    background-color: var(--fs-color-primary-#{$option}) !important;
   }
 }
 
 .bg-secondary {
-  background-color: var(--fs-color-secondary-50);
+  background-color: var(--fs-color-secondary-50) !important;
 }
 
 @each $option in $options {
   .bg-secondary-#{$option} {
-    background-color: var(--fs-color-secondary-#{$option});
+    background-color: var(--fs-color-secondary-#{$option}) !important;
   }
 }
 
 .bg-tertiary {
-  background-color: var(--fs-color-tertiary-50);
+  background-color: var(--fs-color-tertiary-50) !important;
 }
 
 @each $option in $options {
   .bg-tertiary-#{$option} {
-    background-color: var(--fs-color-tertiary-#{$option});
+    background-color: var(--fs-color-tertiary-#{$option}) !important;
   }
 }
 
 /* Text Color Utilities */
+.text-light {
+  color: var(--fs-color-text-light) !important;
+}
+
+.text-dark {
+  color: var(--fs-color-text-dark) !important;
+}
+
 .text-primary {
-  color: var(--fs-color-primary-50);
+  color: var(--fs-color-primary-50) !important;
 }
 
 @each $option in $options {
   .text-primary-#{$option} {
-    color: var(--fs-color-primary-#{$option});
+    color: var(--fs-color-primary-#{$option}) !important;
   }
 }
 
 .text-secondary {
-  color: var(--fs-color-secondary-50);
+  color: var(--fs-color-secondary-50) !important;
 }
 
 @each $option in $options {
   .text-secondary-#{$option} {
-    color: var(--fs-color-secondary-#{$option});
+    color: var(--fs-color-secondary-#{$option}) !important;
   }
 }
 
 .text-tertiary {
-  color: var(--fs-color-tertiary-50);
+  color: var(--fs-color-tertiary-50) !important;
 }
 
 @each $option in $options {
   .text-tertiary-#{$option} {
-    color: var(--fs-color-tertiary-#{$option});
+    color: var(--fs-color-tertiary-#{$option}) !important;
   }
+}
+
+/* Border Color Utilities */
+.border-primary {
+  border-color: var(--fs-color-primary-50) !important;
+}
+
+@each $option in $options {
+  .border-primary-#{$option} {
+    border-color: var(--fs-color-primary-#{$option}) !important;
+  }
+}
+
+.border-secondary {
+  border-color: var(--fs-color-secondary-50) !important;
+}
+
+@each $option in $options {
+  .border-secondary-#{$option} {
+    border-color: var(--fs-color-secondary-#{$option}) !important;
+  }
+}
+
+.border-tertiary {
+  border-color: var(--fs-color-tertiary-50) !important;
+}
+
+@each $option in $options {
+  .border-tertiary-#{$option} {
+    border-color: var(--fs-color-tertiary-#{$option}) !important;
+  }
+}
+
+/* Background Gradient Utilities */
+.bg-gradient-primary {
+  background-image: linear-gradient(45deg, var(--fs-color-primary-40), var(--fs-color-primary-60)) !important;
+}
+
+.bg-gradient-secondary {
+  background-image: linear-gradient(45deg, var(--fs-color-secondary-40), var(--fs-color-secondary-60)) !important;
+}
+
+.bg-gradient-tertiary {
+  background-image: linear-gradient(45deg, var(--fs-color-tertiary-40), var(--fs-color-tertiary-60)) !important;
 }

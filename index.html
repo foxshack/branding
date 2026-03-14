@@ -34,7 +34,7 @@
   </header>
 
   <main>
-    <article>
+    <section id="intro">
       <h1>Welcome to Semantic Styling</h1>
       <p>This page demonstrates a <strong>comprehensive semantic CSS theme</strong> built with foxshack brand colors:
         <em>Solar Clay</em>, <em>Mineral Grey</em>, and <em>Verdant Lime</em>. Every HTML element is styled based on its
@@ -45,12 +45,12 @@
         <p>Semantic CSS means styling HTML elements directly so that your markup structure conveys meaning without
           needing class names. This approach keeps HTML cleaner and CSS more maintainable.</p>
       </aside>
-    </article>
+    </section>
 
-    <section id="typography">
+    <article id="typography">
       <h2>Typography & Text Formatting</h2>
 
-      <article>
+      <section>
         <h3>Heading Levels</h3>
         <p>This page uses proper heading hierarchy to structure content semantically.</p>
 
@@ -59,31 +59,31 @@
 
         <h5>Fifth Level Heading</h5>
         <h6>Sixth Level Heading</h6>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Text Formatting</h3>
         <p>You can use <strong>bold text</strong> to emphasize importance, <em>italic text</em> for emphasis, and
           <small>smaller text</small> for supplementary information.
         </p>
         <p>Use <mark>highlighted text</mark> to draw attention to specific terms or concepts.</p>
         <p>For code references within text, use <code>inline code</code> formatting.</p>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Blockquotes</h3>
         <blockquote>
           The design of CSS is constrained by the rules of CSS: it must be simple enough to implement quickly, yet
           powerful enough to describe the layout of real-world documents.
           <cite>— W3C CSS Specification</cite>
         </blockquote>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <section id="lists">
+    <article id="lists">
       <h2>Lists & Organization</h2>
 
-      <article>
+      <section>
         <h3>Unordered Lists</h3>
         <p>Use unordered lists for items without a specific sequence:</p>
         <ul>
@@ -96,9 +96,9 @@
           </li>
           <li>Verdant Lime - Success and callout color</li>
         </ul>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Ordered Lists</h3>
         <p>Use ordered lists for sequential steps or rankings:</p>
         <ol>
@@ -108,9 +108,21 @@
           <li>Ensure proper spacing and hierarchy</li>
           <li>Test across different content scenarios</li>
         </ol>
-      </article>
+      </section>
 
-      <article>
+      <section>
+        <h3>Aricle Lists</h3>
+        <p>Use ordered lists with articles for 'card' style output:</p>
+        <ul>
+          <li><article>Reset default browser styles</article></li>
+          <li><article>Define CSS custom properties for colors and typography</article></li>
+          <li><article>Style semantic HTML elements</article></li>
+          <li><article>Ensure proper spacing and hierarchy</article></li>
+          <li><article>Test across different content scenarios</article></li>
+        </ul>
+      </section>
+
+      <section>
         <h3>Definition Lists</h3>
         <dl>
           <dt>Semantic HTML</dt>
@@ -122,20 +134,20 @@
           <dt>Accessibility</dt>
           <dd>The practice of making websites usable for everyone, including people with disabilities.</dd>
         </dl>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <section id="code">
+    <article id="code">
       <h2>Code & Preformatted Text</h2>
 
-      <article>
+      <section>
         <h3>Inline Code</h3>
         <p>For short code snippets in text, use <code>code</code> elements like this:
           <code>const theme = { primary: '#D96E3C' }</code>.
         </p>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Code Blocks</h3>
         <p>For longer code examples, use <code>&lt;pre&gt;</code> elements:</p>
         <pre><code>/* Define semantic color tokens */
@@ -144,9 +156,9 @@
   --fs-color-text: #333333;
   --fs-color-background: #FFFFFF;
 }</code></pre>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>HTML Example</h3>
         <pre><code>&lt;header&gt;
   &lt;h1&gt;Page Title&lt;/h1&gt;
@@ -157,13 +169,13 @@
     &lt;/ul&gt;
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <section id="tables">
+    <article id="tables">
       <h2>Tables & Data</h2>
 
-      <article>
+      <section>
         <h3>Color Palette</h3>
         <table>
           <thead>
@@ -191,9 +203,9 @@
             </tr>
           </tbody>
         </table>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Feature Comparison</h3>
         <table>
           <thead>
@@ -226,13 +238,13 @@
             </tr>
           </tbody>
         </table>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <section id="forms">
+    <article id="forms">
       <h2>Forms & Interactions</h2>
 
-      <article>
+      <section>
         <h3>Contact Form Example</h3>
         <form>
           <label for="name">Full Name</label>
@@ -267,26 +279,26 @@
             <button type="reset">Clear Form</button>
           </footer>
         </form>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <section id="navigation">
+    <article id="navigation">
       <h2>Navigation & Links</h2>
 
-      <article>
+      <section>
         <h3>Link Examples</h3>
         <p>
           This is a <a href="#">regular link</a> that you can interact with.
           Try hovering over it to see the interactive styling.
           You can also <a href="https://www.example.com">visit external sites</a>.
         </p>
-      </article>
-    </section>
+      </section>
+    </article>
 
-    <section id="media">
+    <article id="media">
       <h2>Media & Figures</h2>
 
-      <article>
+      <section>
         <h3>Images with Captions</h3>
         <figure>
           <svg width="300" height="200"
@@ -297,15 +309,15 @@
           </svg>
           <figcaption>This is a placeholder image with a descriptive caption below it.</figcaption>
         </figure>
-      </article>
-    </section>
+      </section>
+    </article>
 
     <hr>
 
-    <section id="colors">
+    <article id="colors">
       <h2>Theme Colors</h2>
 
-      <article>
+      <section>
         <h3>Primary</h3>
         <div class="color-grid">
           <div class="color-swatch" style="background-color: var(--fs-color-primary-20);">
@@ -330,9 +342,9 @@
             <span class="color-label">80</span>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Secondary</h3>
         <div class="color-grid">
           <div class="color-swatch" style="background-color: var(--fs-color-secondary-20);">
@@ -357,9 +369,9 @@
             <span class="color-label">80</span>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Tertiary</h3>
         <div class="color-grid">
           <div class="color-swatch" style="background-color: var(--fs-color-tertiary-20);">
@@ -384,9 +396,9 @@
             <span class="color-label">80</span>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <h3>Neutral</h3>
         <div class="color-grid">
           <div class="color-swatch" style="background-color: var(--fs-color-grey-20);">
@@ -411,8 +423,8 @@
             <span class="color-label">80</span>
           </div>
         </div>
-      </article>
-    </section>
+      </section>
+    </article>
 
     <hr>
 
@@ -429,10 +441,6 @@
       </ul>
       <p>Start using semantic HTML and watch your websites become more maintainable and accessible!</p>
     </section>
-
-
-
-
   </main>
 
   <footer>
@@ -450,4 +458,5 @@
   <script src="index.js"></script>
 
 </body>
+
 </html>

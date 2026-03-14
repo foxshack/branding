@@ -10,7 +10,6 @@ h6 {
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
   margin-bottom: 1rem;
-  color: var(--fs-color-text);
 }
 
 h1 {
@@ -28,7 +27,6 @@ h2 {
 h3 {
   font-size: 1.5rem;
   margin-top: 1.5rem;
-  color: var(--fs-color-grey-60);
 }
 
 h4 {
@@ -44,7 +42,6 @@ h5 {
 h6 {
   font-size: 1rem;
   margin-top: 1rem;
-  color: var(--fs-color-grey-50);
 }
 
 /* Paragraph & Text */
@@ -55,13 +52,11 @@ p {
 strong,
 b {
   font-weight: 700;
-  color: var(--fs-color-grey-70);
 }
 
 em,
 i {
   font-style: italic;
-  color: var(--fs-color-primary-60);
 }
 
 small {
@@ -160,6 +155,31 @@ ol ul,
 ol ol {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+}
+
+ul:has(> li > article) {
+  display: grid;
+  padding-left: 0;
+  gap: 1rem;
+  list-style: none;
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  article {
+    border: 1px solid var(--fs-color-border);
+    border-radius: var(--fs-border-radius);
+    padding: 1rem;
+    background-color: var(--fs-color-secondary-20);
+    height: 100%;
+  }
+
 }
 
 dl {

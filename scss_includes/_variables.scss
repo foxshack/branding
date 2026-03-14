@@ -60,6 +60,7 @@ $grey: #727272; // Mineral Grey
   --fs-color-background: #fff;
   --fs-color-background-alt: color-mix(in oklch, #000 2%, var(--fs-color-background));
   --fs-color-text-light: #fff;
+  --fs-color-text-dark: var(--fs-color-grey-80);
   --fs-color-border: var(--fs-color-grey-30);
   --fs-color-link: var(--fs-color-tertiary-60);
   --fs-color-link-hover: color-mix(in oklch, #000 20%, var(--fs-color-link));
