@@ -38,6 +38,7 @@
   --fs-color-text: var(--fs-color-grey-70);
   --fs-color-text-muted: var(--fs-color-grey-50);
   --fs-color-background: #fff;
+  --fs-color-background-alt: color-mix(in oklch, #000 2%, var(--fs-color-background));
   --fs-color-text-light: #fff;
   --fs-color-border: var(--fs-color-grey-30);
   --fs-color-link: var(--fs-color-tertiary-60);
@@ -208,7 +209,7 @@ a:active {
 code,
 pre {
   font-family: var(--fs-font-family-mono);
-  background-color: var(--fs-color-grey-20);
+  background-color: var(--fs-color-background-alt);
   color: var(--fs-color-grey-70);
   border: 1px solid var(--fs-color-border);
   border-radius: var(--fs-border-radius);
@@ -529,7 +530,7 @@ tr:hover {
 /* Forms */
 form {
   padding: 1rem;
-  background-color: var(--fs-color-grey-20);
+  background-color: var(--fs-color-background-alt);
   border: 1px solid var(--fs-color-border);
   border-radius: var(--fs-border-radius);
 }
@@ -641,6 +642,18 @@ button.unstyled:focus,
 button.unstyled:active {
   color: inherit;
   background-color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Background Utilities */
@@ -870,18 +883,6 @@ button.unstyled:active {
   border-radius: var(--fs-border-radius);
   font-size: 0.875rem;
   font-weight: 600;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 [class^=icon-],

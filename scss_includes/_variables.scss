@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+
+// Color scale - numeric values from 20 (lightest) to 80 (darkest), 50 is base
+// Adjust mix percentages to change all tints/shades at once
+$color-scale: (
+  20: 85%, // lightest (80% white mixed)
+  30: 60%, // lighter
+  40: 30%, // light
+  50: 0%, // base (no mixing)
+  60: 20%, // dark (30% black mixed)
+  70: 35%, // darker
+  80: 50% // darkest
+);
+
+// Base theme colors - change these to update all variants automatically
+$theme-colors: (
+  'primary': #2d6f8a,
+  'secondary': #99316f,
+  'tertiary': #a7c029
+);
+
+// Grey - neutral color palette
+$grey: #727272; // Mineral Grey
+
+:root {
+
+  /* Base colours and numeric scale variants */
+  @each $color-name, $color-value in $theme-colors {
+    --fs-color-#{$color-name}: #{$color-value};
+    --fs-color-#{$color-name}-50: var(--fs-color-#{$color-name});
+
+    @each $scale, $amount in $color-scale {
+      @if $scale < 50 {
+        --fs-color-#{$color-name}-#{$scale}: color-mix(in oklch, #fff #{$amount}, var(--fs-color-#{$color-name}));
+      }
+
+      @else if $scale >50 {
+        --fs-color-#{$color-name}-#{$scale}: color-mix(in oklch, #000 #{$amount}, var(--fs-color-#{$color-name}));
+      }
+    }
+  }
+
+  /* Grey variants */
+  --fs-color-grey: #{$grey};
+  --fs-color-grey-50: var(--fs-color-grey);
+
+  @each $scale, $amount in $color-scale {
+    @if $scale < 50 {
+      --fs-color-grey-#{$scale}: color-mix(in oklch, #fff #{$amount}, var(--fs-color-grey));
+    }
+
+    @else if $scale >50 {
+      --fs-color-grey-#{$scale}: color-mix(in oklch, #000 #{$amount}, var(--fs-color-grey));
+    }
+  }
+
+  /* Semantic colour tokens */
+  --fs-color-text: var(--fs-color-grey-70);
+  --fs-color-text-muted: var(--fs-color-grey-50);
+  --fs-color-background: #fff;
+  --fs-color-background-alt: color-mix(in oklch, #000 2%, var(--fs-color-background));
+  --fs-color-text-light: #fff;
+  --fs-color-border: var(--fs-color-grey-30);
+  --fs-color-link: var(--fs-color-tertiary-60);
+  --fs-color-link-hover: color-mix(in oklch, #000 20%, var(--fs-color-link));
+  // --fs-color-link-visited: var(--fs-color-tertiary-80);
+
+  /* Typography */
+  --fs-font-family-sans: -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif;
+  --fs-font-family-serif: "Libre Baskerville",
+  "Georgia",
+  "Times New Roman",
+  Times,
+  serif;
+  // --fs-font-family-cursive: "Comic Sans", cursive, serif;
+  --fs-font-family-mono: "SF Mono",
+  Monaco,
+  "Cascadia Code",
+  "Roboto Mono",
+  Consolas,
+  "Courier New",
+  monospace;
+  --fs-font-family-headings: var(--fs-font-family-serif);
+  --fs-font-size-base: 16px;
+  --fs-line-height-base: 1.6;
+  --fs-line-height-tight: 1.2;
+
+  /* Additional tokens can be added here as needed */
+  --fs-button-bg: var(--fs-color-tertiary-70);
+  --fs-button-hover-bg: color-mix(in oklch, #000 20%, var(--fs-button-bg));
+  --fs-border-radius: 4px;
+}

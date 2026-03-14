@@ -1,0 +1,185 @@
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fs-font-family-headings);
+  font-weight: 700;
+  line-height: var(--fs-line-height-tight);
+  margin-bottom: 1rem;
+  color: var(--fs-color-text);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 1.75rem;
+  border-bottom: 2px solid var(--fs-color-grey-60);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--fs-color-grey-60);
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: var(--fs-color-grey-50);
+}
+
+/* Paragraph & Text */
+p {
+  margin-bottom: 1rem;
+}
+
+strong,
+b {
+  font-weight: 700;
+  color: var(--fs-color-grey-70);
+}
+
+em,
+i {
+  font-style: italic;
+  color: var(--fs-color-primary-60);
+}
+
+small {
+  font-size: 0.875rem;
+  color: var(--fs-color-text-muted);
+}
+
+mark {
+  background-color: var(--fs-color-tertiary-20);
+  color: inherit;
+  padding: 0.125rem 0.25rem;
+  border-radius: 2px;
+}
+
+/* Links */
+a {
+  color: var(--fs-color-link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--fs-color-link-hover);
+  border-bottom-color: var(--fs-color-link-hover);
+}
+
+// a:visited {
+//   color: var(--fs-color-link-visited);
+// }
+
+a:active {
+  color: var(--fs-color-link-hover);
+}
+
+/* Code & Pre */
+code,
+pre {
+  font-family: var(--fs-font-family-mono);
+  background-color: var(--fs-color-background-alt);
+  color: var(--fs-color-grey-70);
+  border: 1px solid var(--fs-color-border);
+  border-radius: var(--fs-border-radius);
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0.2rem 0.4rem;
+  display: inline-block;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+}
+
+/* Blockquote */
+blockquote {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 4px solid var(--fs-color-primary);
+  color: var(--fs-color-text-muted);
+  font-style: italic;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  color: var(--fs-color-text);
+  margin-top: 0.5rem;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+dl {
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: 700;
+  color: var(--fs-color-primary-dark);
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--fs-color-border);
+  margin: 2rem 0;
+}

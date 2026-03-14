@@ -1,0 +1,33 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--fs-font-family-sans);
+  font-size: var(--fs-font-size-base);
+  line-height: var(--fs-line-height-base);
+  color: var(--fs-color-text);
+  background-color: var(--fs-color-background);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+main {
+  flex: 1;
+}

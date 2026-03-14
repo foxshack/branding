@@ -1,0 +1,36 @@
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  color: inherit;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 28px 28px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 28px 28px;
+}
+
+.icon-burger {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M10 20h60M10 40h60M10 60h60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M10 20h60M10 40h60M10 60h60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+}
+
+.icon-close {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M20 20l40 40M60 20L20 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M20 20l40 40M60 20L20 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+}
+
+.icon-chevron-left {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M45 20L25 40L45 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M45 20L25 40L45 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+}
+
+.icon-chevron-right {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M35 20L55 40L35 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M35 20L55 40L35 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+}

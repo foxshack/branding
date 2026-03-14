@@ -1,0 +1,28 @@
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border: 1px solid var(--fs-color-border);
+}
+
+thead {
+  background-color: var(--fs-color-grey-20);
+  font-weight: 700;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--fs-color-border);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(107, 107, 107, 0.02);
+}
+
+tr:hover {
+  background-color: rgba(217, 110, 60, 0.05);
+}
