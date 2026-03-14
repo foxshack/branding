@@ -9,39 +9,36 @@ h6 {
   font-family: var(--fs-font-family-headings);
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
-  margin-bottom: 1rem;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-top: 2rem;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 h2 {
   font-size: 2rem;
-  margin-top: 1.75rem;
   border-bottom: 2px solid var(--fs-color-grey-60);
-  padding-bottom: 0.5rem;
+  margin-bottom: 1em;
 }
 
 h3 {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
 }
 
 h4 {
   font-size: 1.25rem;
-  margin-top: 1.25rem;
 }
 
 h5 {
   font-size: 1.1rem;
-  margin-top: 1rem;
 }
 
 h6 {
   font-size: 1rem;
-  margin-top: 1rem;
 }
 
 /* Paragraph & Text */
@@ -162,6 +159,10 @@ ul:has(> li > article) {
   padding-left: 0;
   gap: 1rem;
   list-style: none;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media (min-width: 900px) {
     grid-template-columns: repeat(3, 1fr);

@@ -1,0 +1,30 @@
+[data-bg-src] {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 21/9;
+  padding: unset;
+  position: relative;
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+[data-bg-src]::before {
+  background-color: var(--fs-color-primary-80);
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+[data-bg-src].bg-fade-in::before {
+  background-color: transparent;
+  transition: background-color 1s ease-in-out;
+}
+
+[data-bg-src] > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

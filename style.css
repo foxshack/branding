@@ -73,7 +73,7 @@
   --fs-line-height-base: 1.6;
   --fs-line-height-tight: 1.2;
   /* Additional tokens can be added here as needed */
-  --fs-button-bg: var(--fs-color-tertiary-70);
+  --fs-button-bg: var(--fs-color-primary-60);
   --fs-button-hover-bg: color-mix(in oklch, #000 20%, var(--fs-button-bg));
   --fs-border-radius: 4px;
 }
@@ -101,7 +101,9 @@ body {
   flex-direction: column;
 }
 
-main,
+main > article,
+main > section,
+main > deiv,
 .container {
   max-width: 1200px;
   margin: auto;
@@ -122,39 +124,36 @@ h6 {
   font-family: var(--fs-font-family-headings);
   font-weight: 700;
   line-height: var(--fs-line-height-tight);
-  margin-bottom: 1rem;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin-top: 2rem;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 h2 {
   font-size: 2rem;
-  margin-top: 1.75rem;
   border-bottom: 2px solid var(--fs-color-grey-60);
-  padding-bottom: 0.5rem;
+  margin-bottom: 1em;
 }
 
 h3 {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
 }
 
 h4 {
   font-size: 1.25rem;
-  margin-top: 1.25rem;
 }
 
 h5 {
   font-size: 1.1rem;
-  margin-top: 1rem;
 }
 
 h6 {
   font-size: 1rem;
-  margin-top: 1rem;
 }
 
 /* Paragraph & Text */
@@ -272,6 +271,11 @@ ul:has(> li > article) {
   gap: 1rem;
   list-style: none;
 }
+@media (min-width: 600px) {
+  ul:has(> li > article) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 900px) {
   ul:has(> li > article) {
     grid-template-columns: repeat(3, 1fr);
@@ -320,9 +324,9 @@ body > header {
 
 /* Semantic Sections */
 header {
-  background-color: var(--fs-color-grey-60);
+  background-color: var(--fs-color-primary-80);
   color: var(--fs-color-text-light);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 header a {
@@ -371,7 +375,7 @@ header button:hover, header button:focus, header button:active {
 }
 
 body > header nav {
-  background-color: var(--fs-color-grey-60);
+  background-color: var(--fs-color-primary-80);
   position: fixed;
   top: 0;
   right: -310px;
@@ -462,6 +466,28 @@ body > header nav a:visited {
   border-bottom-color: transparent;
 }
 
+main > header:has(> h1) {
+  padding: 2rem 0;
+  background-color: var(--fs-color-primary-60);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: space-around;
+  margin-bottom: 1.5em;
+}
+main > header:has(> h1) h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+main > header:has(> h1) p {
+  max-width: 600px;
+  margin-top: 0;
+  font-weight: lighter;
+  font-size: 2.5rem;
+}
+
 article {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
@@ -505,7 +531,7 @@ aside p {
 }
 
 body > footer {
-  background-color: var(--fs-color-grey-70);
+  background-color: var(--fs-color-primary-80);
   color: #FFFFFF;
   padding: 2rem 1rem;
   margin-top: auto;
@@ -1063,6 +1089,36 @@ button.unstyled:active {
 .icon-chevron-right {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M35 20L55 40L35 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M35 20L55 40L35 60' stroke='%23000' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+}
+
+[data-bg-src] {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 21/9;
+  padding: unset;
+  position: relative;
+}
+[data-bg-src] > * {
+  position: relative;
+  z-index: 1;
+}
+
+[data-bg-src]::before {
+  background-color: var(--fs-color-primary-80);
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+[data-bg-src].bg-fade-in::before {
+  background-color: transparent;
+  transition: background-color 1s ease-in-out;
+}
+
+[data-bg-src] > * {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

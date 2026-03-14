@@ -7,9 +7,9 @@ body>header {
 
 /* Semantic Sections */
 header {
-  background-color: var(--fs-color-grey-60);
+  background-color: var(--fs-color-primary-80);
   color: var(--fs-color-text-light);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 header a {
@@ -60,7 +60,7 @@ header button {
 
 body>header {
   nav {
-    background-color: var(--fs-color-grey-60);
+    background-color: var(--fs-color-primary-80);
     position: fixed;
     top: 0;
     right: -310px;
@@ -152,6 +152,32 @@ body>header {
   }
 }
 
+// hero section
+main > header:has(> h1) {
+  padding: 2rem 0;
+  background-color: var(--fs-color-primary-60);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: space-around;
+  margin-bottom: 1.5em;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    max-width: 600px;
+    margin-top: 0;
+    font-weight: lighter;
+    font-size: 2.5rem;
+  }
+
+}
+
 article {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
@@ -197,7 +223,7 @@ aside p {
 }
 
 body>footer {
-  background-color: var(--fs-color-grey-70);
+  background-color: var(--fs-color-primary-80);
   color: #FFFFFF;
   padding: 2rem 1rem;
   margin-top: auto;

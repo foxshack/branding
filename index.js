@@ -10,8 +10,8 @@ const closeNav = () => {
     nav.classList.remove('active');
     // document.body.style.overflow = ''; // Re-enable body scrolling
     setTimeout(() => {
-        nav.style.width = '0'; // Reset width after animation
-        nav.style.visibility = 'hidden'; // Hide nav after animation completes
+      nav.style.width = '0'; // Reset width after animation
+      nav.style.visibility = 'hidden'; // Hide nav after animation completes
     }, 300);
   }
 };
@@ -24,7 +24,7 @@ const closeNav = () => {
 
 const openNav = () => {
   if (isMobile()) {
-    nav.style.width='300px'; // Ensure nav has width for animation
+    nav.style.width = '300px'; // Ensure nav has width for animation
     nav.style.visibility = 'visible'; // Ensure nav is visible before animation
     nav.style.right = '0px'; // Move nav on-screen
     nav.classList.add('active');
@@ -74,7 +74,7 @@ const throttle = (func, limit) => {
 const handleResize = () => {
   if (window.innerWidth > 900) {
     nav.style.visibility = 'visible';
-    nav.style.width='unset'; // Ensure nav has width for animation
+    nav.style.width = 'unset'; // Ensure nav has width for animation
     nav.style.right = '0px'; // Move nav on-screen
   } else {
     nav.style.visibility = 'hidden';
@@ -86,3 +86,32 @@ window.addEventListener('resize', throttle(handleResize, 50));
 
 window.addEventListener('load', handleResize);
 window.addEventListener('orientationchange', handleResize);
+
+// Lazy load background images
+// Could tie this to requestIdleCallback() to make it more performant
+
+const loadLazyBackgrounds = function () {
+  const lazyBackgrounds = document.querySelectorAll('[data-bg-src]');
+
+  lazyBackgrounds.forEach(element => {
+    const imageToLoad = element.getAttribute('data-bg-src');
+    const image = new Image();
+    image.src = imageToLoad;
+    image.onload = () => {
+      element.style.backgroundImage = `url(${imageToLoad})`;
+      element.classList.add('bg-fade-in');
+    }
+  });
+}
+
+//check if requestIdleCallback is supported
+if ('requestIdleCallback' in window) {
+  window.requestIdleCallback(
+    loadLazyBackgrounds, {
+    timeout: 2000
+  });
+  console.log('requestIdleCallback is supported');
+} else {
+  window.addEventListener('load', loadLazyBackgrounds);
+  console.log('requestIdleCallback is not supported');
+}
