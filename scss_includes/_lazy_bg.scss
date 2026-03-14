@@ -6,7 +6,7 @@
   padding: unset;
   position: relative;
 
-  & > * {
+  &>* {
     position: relative;
     z-index: 1;
   }
@@ -24,7 +24,7 @@
   transition: background-color 1s ease-in-out;
 }
 
-[data-bg-src] > * {
+[data-bg-src]>* {
   padding-left: 1rem;
   padding-right: 1rem;
 }

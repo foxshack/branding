@@ -3,13 +3,13 @@
 // Color scale - numeric values from 20 (lightest) to 80 (darkest), 50 is base
 // Adjust mix percentages to change all tints/shades at once
 $color-scale: (
-  20: 85%, // lightest (80% white mixed)
-  30: 60%, // lighter
-  40: 30%, // light
-  50: 0%, // base (no mixing)
-  60: 20%, // dark (30% black mixed)
-  70: 35%, // darker
-  80: 50% // darkest
+  20: 85%,
+  30: 60%,
+  40: 30%,
+  50: 0%,
+  60: 20%,
+  70: 35%,
+  80: 50%
 );
 
 // Base theme colors - change these to update all variants automatically

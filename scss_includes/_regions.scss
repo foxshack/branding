@@ -153,7 +153,7 @@ body>header {
 }
 
 // hero section
-main > header:has(> h1) {
+main>header:has(> h1) {
   padding: 2rem 0;
   background-color: var(--fs-color-primary-60);
   display: flex;
@@ -168,7 +168,7 @@ main > header:has(> h1) {
     font-size: clamp(calc(3rem * 0.75), 6vw, 3rem);
     margin-bottom: 0.5em;
   }
-  
+
   p {
     max-width: 600px;
     margin-top: 0;
