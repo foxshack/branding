@@ -129,31 +129,30 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.875rem, 6vw, 2.5rem);
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 
 h2 {
-  font-size: 2rem;
-  border-bottom: 2px solid var(--fs-color-grey-60);
+  font-size: clamp(1.5rem, 6vw, 2rem);
   margin-bottom: 1em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 6vw, 1.5rem);
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: clamp(0.9375rem, 6vw, 1.25rem);
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: clamp(0.825rem, 6vw, 1.1rem);
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 6vw, 1rem);
 }
 
 /* Paragraph & Text */
@@ -478,14 +477,14 @@ main > header:has(> h1) {
   margin-bottom: 1.5em;
 }
 main > header:has(> h1) h1 {
-  font-size: 3rem;
+  font-size: clamp(2.25rem, 6vw, 3rem);
   margin-bottom: 0.5em;
 }
 main > header:has(> h1) p {
   max-width: 600px;
   margin-top: 0;
   font-weight: lighter;
-  font-size: 2.5rem;
+  font-size: clamp(1.875rem, 6vw, 2.5rem);
 }
 
 article {

@@ -13,32 +13,40 @@ h6 {
   margin-bottom: 1em;
 }
 
+$headings-sizes: (
+  1: 2.5rem,
+  2: 2rem,
+  3: 1.5rem,
+  4: 1.25rem,
+  5: 1.1rem,
+  6: 1rem
+);
+
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(calc(map-get($headings-sizes, 1) * 0.75), 6vw, map-get($headings-sizes, 1));
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 
 h2 {
-  font-size: 2rem;
-  border-bottom: 2px solid var(--fs-color-grey-60);
+  font-size: clamp(calc(map-get($headings-sizes, 2) * 0.75), 6vw, map-get($headings-sizes, 2));
   margin-bottom: 1em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(calc(map-get($headings-sizes, 3) * 0.75), 6vw, map-get($headings-sizes, 3));
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: clamp(calc(map-get($headings-sizes, 4) * 0.75), 6vw, map-get($headings-sizes, 4));
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: clamp(calc(map-get($headings-sizes, 5) * 0.75), 6vw, map-get($headings-sizes, 5));
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: clamp(calc(map-get($headings-sizes, 6) * 0.75), 6vw, map-get($headings-sizes, 6));
 }
 
 /* Paragraph & Text */
