@@ -200,7 +200,7 @@ const loadLazyBackgrounds = function () {
 if ('requestIdleCallback' in window) {
   window.requestIdleCallback(
     loadLazyBackgrounds, {
-    timeout: 2000
+    timeout: 1000
   });
   console.log('requestIdleCallback is supported');
 } else {
