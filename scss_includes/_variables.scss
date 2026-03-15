@@ -99,5 +99,5 @@ $grey: #727272; // Mineral Grey
   /* Additional tokens can be added here as needed */
   --fs-button-bg: var(--fs-color-primary-60);
   --fs-button-hover-bg: color-mix(in oklch, #000 20%, var(--fs-button-bg));
-  --fs-border-radius: 4px;
+  --fs-border-radius: 0.5rem;
 }

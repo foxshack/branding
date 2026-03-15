@@ -75,7 +75,7 @@
   /* Additional tokens can be added here as needed */
   --fs-button-bg: var(--fs-color-primary-60);
   --fs-button-hover-bg: color-mix(in oklch, #000 20%, var(--fs-button-bg));
-  --fs-border-radius: 4px;
+  --fs-border-radius: 0.5rem;
 }
 
 /* CSS Reset */
@@ -277,7 +277,7 @@ ul:has(> li > article) {
 }
 @media (min-width: 900px) {
   ul:has(> li > article) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 ul:has(> li > article) li {
@@ -288,8 +288,31 @@ ul:has(> li > article) article {
   border: 1px solid var(--fs-color-border);
   border-radius: var(--fs-border-radius);
   padding: 1rem;
-  background-color: var(--fs-color-secondary-20);
+  background-color: var(--fs-color-primary-20);
   height: 100%;
+}
+ul:has(> li > article) article:has(> img:first-child) {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+ul:has(> li > article) article:has(> img:first-child) img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+ul:has(> li > article) article:has(> img:first-child) h1,
+ul:has(> li > article) article:has(> img:first-child) h2,
+ul:has(> li > article) article:has(> img:first-child) h3,
+ul:has(> li > article) article:has(> img:first-child) h4,
+ul:has(> li > article) article:has(> img:first-child) h5,
+ul:has(> li > article) article:has(> img:first-child) h6,
+ul:has(> li > article) article:has(> img:first-child) p {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 dl {
@@ -484,6 +507,7 @@ main > header:has(> h1) p {
   max-width: 600px;
   margin-top: 0;
   font-weight: lighter;
+  line-height: 1.25;
   font-size: clamp(1.875rem, 6vw, 2.5rem);
 }
 
