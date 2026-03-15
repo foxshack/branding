@@ -87,6 +87,98 @@ window.addEventListener('resize', throttle(handleResize, 50));
 window.addEventListener('load', handleResize);
 window.addEventListener('orientationchange', handleResize);
 
+// Smoothly animate native details/summary open/close in both directions.
+const initAnimatedDetails = () => {
+  if (typeof Element.prototype.animate !== 'function') {
+    return;
+  }
+
+  document.querySelectorAll('details').forEach((details) => {
+    const summary = details.querySelector('summary');
+
+    if (!summary || details.children.length < 2) {
+      return;
+    }
+
+    let animation = null;
+    let isClosing = false;
+    let isExpanding = false;
+
+    const onAnimationFinish = (open) => {
+      details.open = open;
+      details.style.height = '';
+      details.style.overflow = '';
+      animation = null;
+      isClosing = false;
+      isExpanding = false;
+    };
+
+    const open = () => {
+      details.style.height = `${details.offsetHeight}px`;
+      details.open = true;
+
+      requestAnimationFrame(() => {
+        isExpanding = true;
+
+        if (animation) {
+          animation.cancel();
+        }
+
+        const startHeight = `${details.offsetHeight}px`;
+        const endHeight = `${details.scrollHeight}px`;
+
+        animation = details.animate({
+          height: [startHeight, endHeight]
+        }, {
+          duration: 300,
+          easing: 'ease-out'
+        });
+
+        animation.onfinish = () => onAnimationFinish(true);
+        animation.oncancel = () => {
+          isExpanding = false;
+        };
+      });
+    };
+
+    const close = () => {
+      isClosing = true;
+
+      if (animation) {
+        animation.cancel();
+      }
+
+      const startHeight = `${details.offsetHeight}px`;
+      const endHeight = `${summary.offsetHeight}px`;
+
+      animation = details.animate({
+        height: [startHeight, endHeight]
+      }, {
+        duration: 260,
+        easing: 'ease-out'
+      });
+
+      animation.onfinish = () => onAnimationFinish(false);
+      animation.oncancel = () => {
+        isClosing = false;
+      };
+    };
+
+    summary.addEventListener('click', (event) => {
+      event.preventDefault();
+      details.style.overflow = 'hidden';
+
+      if (isClosing || !details.open) {
+        open();
+      } else if (isExpanding || details.open) {
+        close();
+      }
+    });
+  });
+};
+
+window.addEventListener('load', initAnimatedDetails);
+
 // Lazy load background images
 // Could tie this to requestIdleCallback() to make it more performant
 

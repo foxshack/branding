@@ -91,7 +91,8 @@ $grey: #727272; // Mineral Grey
   Consolas,
   "Courier New",
   monospace;
-  --fs-font-family-headings: var(--fs-font-family-serif);
+  --fs-font-family-headings: var(--fs-font-family-sans);
+  // --fs-font-family-headings: var(--fs-font-family-serif);
   --fs-font-size-base: 16px;
   --fs-line-height-base: 1.6;
   --fs-line-height-tight: 1.2;

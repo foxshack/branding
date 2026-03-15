@@ -232,8 +232,9 @@ dd {
 
 /* Horizontal Rule */
 hr {
+  max-width: 1200px;
+  margin: auto;
   border: none;
   height: 2px;
   background-color: var(--fs-color-border);
-  margin: 2rem 0;
 }
