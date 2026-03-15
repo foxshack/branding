@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 
 // Color scale - numeric values from 20 (lightest) to 80 (darkest), 50 is base
 // Adjust mix percentages to change all tints/shades at once
@@ -78,8 +78,7 @@ $grey: #727272; // Mineral Grey
   "Droid Sans",
   "Helvetica Neue",
   sans-serif;
-  --fs-font-family-serif: "Libre Baskerville",
-  "Georgia",
+  --fs-font-family-serif: "Georgia",
   "Times New Roman",
   Times,
   serif;
@@ -91,7 +90,7 @@ $grey: #727272; // Mineral Grey
   Consolas,
   "Courier New",
   monospace;
-  --fs-font-family-headings: var(--fs-font-family-sans);
+  --fs-font-family-headings: var(--fs-font-family-serif);
   // --fs-font-family-headings: var(--fs-font-family-serif);
   --fs-font-size-base: 16px;
   --fs-line-height-base: 1.6;

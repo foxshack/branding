@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap");
 :root {
   /* Base colours and numeric scale variants */
   --fs-color-primary: #2d6f8a;
@@ -56,8 +55,7 @@
   "Droid Sans",
   "Helvetica Neue",
   sans-serif;
-  --fs-font-family-serif: "Libre Baskerville",
-  "Georgia",
+  --fs-font-family-serif: "Georgia",
   "Times New Roman",
   Times,
   serif;
@@ -68,7 +66,7 @@
   Consolas,
   "Courier New",
   monospace;
-  --fs-font-family-headings: var(--fs-font-family-sans);
+  --fs-font-family-headings: var(--fs-font-family-serif);
   --fs-font-size-base: 16px;
   --fs-line-height-base: 1.6;
   --fs-line-height-tight: 1.2;
@@ -277,7 +275,7 @@ ul:has(> li > article) {
 }
 @media (min-width: 900px) {
   ul:has(> li > article) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 ul:has(> li > article) li {
@@ -361,6 +359,10 @@ details > :not(summary) {
 details > div {
   padding-top: 1rem;
   border: 1px solid var(--fs-color-primary-30);
+}
+
+details:last-of-type {
+  margin-bottom: 1rem;
 }
 
 details summary::after {
@@ -619,6 +621,40 @@ footer {
   margin-top: 1rem;
 }
 
+section:has(> figure:first-child) {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+section:has(> figure:first-child) > div {
+  margin-top: 0;
+}
+section:has(> figure:first-child) h1, section:has(> figure:first-child) h2, section:has(> figure:first-child) h3, section:has(> figure:first-child) h4, section:has(> figure:first-child) h5, section:has(> figure:first-child) h6 {
+  margin-top: 0;
+}
+@media (min-width: 600px) {
+  section:has(> figure:first-child) {
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr; /* 1/3 + 2/3 split */
+  }
+}
+@media (min-width: 900px) {
+  section:has(> figure:first-child) {
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr; /* 1/3 + 2/3 split */
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(50ch, 1fr));
+  }
+}
+
 /* Tables */
 table {
   width: 100%;
@@ -731,12 +767,18 @@ button:active {
 /* Media */
 img,
 svg {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
 
+img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
 figure {
+  max-width: 600px;
   margin-bottom: 1rem;
 }
 
@@ -1181,7 +1223,7 @@ button.unstyled:active {
 
 [data-bg-src].bg-fade-in::before {
   background-color: transparent;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 [data-bg-src] > * {

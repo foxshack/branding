@@ -21,7 +21,7 @@
 
 [data-bg-src].bg-fade-in::before {
   background-color: transparent;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 [data-bg-src]>* {

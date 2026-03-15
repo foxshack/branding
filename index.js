@@ -8,7 +8,6 @@ const closeNav = () => {
   if (isMobile()) {
     nav.style.right = '-310px'; // Move nav off-screen
     nav.classList.remove('active');
-    // document.body.style.overflow = ''; // Re-enable body scrolling
     setTimeout(() => {
       nav.style.width = '0'; // Reset width after animation
       nav.style.visibility = 'hidden'; // Hide nav after animation completes
@@ -16,19 +15,12 @@ const closeNav = () => {
   }
 };
 
-// nav.addEventListener('animationend', () => {
-//   if (!nav.classList.contains('active')) {
-//     nav.classList.add('hidden');
-//   }
-// });
-
 const openNav = () => {
   if (isMobile()) {
     nav.style.width = '300px'; // Ensure nav has width for animation
     nav.style.visibility = 'visible'; // Ensure nav is visible before animation
     nav.style.right = '0px'; // Move nav on-screen
     nav.classList.add('active');
-    // document.body.style.overflow = 'hidden'; // Prevent body scrolling when menu is open
   }
 };
 
@@ -200,10 +192,8 @@ const loadLazyBackgrounds = function () {
 if ('requestIdleCallback' in window) {
   window.requestIdleCallback(
     loadLazyBackgrounds, {
-    timeout: 1000
+    timeout: 500
   });
-  console.log('requestIdleCallback is supported');
 } else {
   window.addEventListener('load', loadLazyBackgrounds);
-  console.log('requestIdleCallback is not supported');
 }

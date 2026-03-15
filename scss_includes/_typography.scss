@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /* Headings */
 h1,
 h2,
@@ -22,30 +24,30 @@ $headings-sizes: (
 );
 
 h1 {
-  font-size: clamp(calc(map-get($headings-sizes, 1) * 0.75), 6vw, map-get($headings-sizes, 1));
+  font-size: clamp(calc(map.get($headings-sizes, 1) * 0.75), 6vw, map.get($headings-sizes, 1));
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
 
 h2 {
-  font-size: clamp(calc(map-get($headings-sizes, 2) * 0.75), 6vw, map-get($headings-sizes, 2));
+  font-size: clamp(calc(map.get($headings-sizes, 2) * 0.75), 6vw, map.get($headings-sizes, 2));
   margin-bottom: 1em;
 }
 
 h3 {
-  font-size: clamp(calc(map-get($headings-sizes, 3) * 0.75), 6vw, map-get($headings-sizes, 3));
+  font-size: clamp(calc(map.get($headings-sizes, 3) * 0.75), 6vw, map.get($headings-sizes, 3));
 }
 
 h4 {
-  font-size: clamp(calc(map-get($headings-sizes, 4) * 0.75), 6vw, map-get($headings-sizes, 4));
+  font-size: clamp(calc(map.get($headings-sizes, 4) * 0.75), 6vw, map.get($headings-sizes, 4));
 }
 
 h5 {
-  font-size: clamp(calc(map-get($headings-sizes, 5) * 0.75), 6vw, map-get($headings-sizes, 5));
+  font-size: clamp(calc(map.get($headings-sizes, 5) * 0.75), 6vw, map.get($headings-sizes, 5));
 }
 
 h6 {
-  font-size: clamp(calc(map-get($headings-sizes, 6) * 0.75), 6vw, map-get($headings-sizes, 6));
+  font-size: clamp(calc(map.get($headings-sizes, 6) * 0.75), 6vw, map.get($headings-sizes, 6));
 }
 
 /* Paragraph & Text */
@@ -172,7 +174,7 @@ ul:has(> li > article) {
   }
 
   @media (min-width: 900px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   li {
@@ -214,7 +216,6 @@ ul:has(> li > article) {
     }
   }
 }
-
 
 dl {
   margin-bottom: 1rem;

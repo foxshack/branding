@@ -1,12 +1,18 @@
 /* Media */
 img,
 svg {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
 
+img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 figure {
+  max-width: 600px;
   margin-bottom: 1rem;
 }
 

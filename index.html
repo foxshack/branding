@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foxshack Branding - Semantic CSS Theme</title>
+  <meta name="description"
+    content="A minimal, opinionated semantic CSS framework for Foxshack branding. Demonstrates semantic HTML elements styled with brand colors: Solar Clay, Mineral Grey, and Verdant Lime. Clean, accessible, and maintainable theme.">
   <link rel="stylesheet" href="style.css?v=260315">
+  <link rel="prefetch" href="./img/IMG_4634-lg.jpg" as="image">
 </head>
 
 <body>
@@ -186,33 +189,25 @@
         <ul>
           <li>
             <article>
-              <img alt="" src="./img/IMG_5919-lg.jpg">
+              <img loading="lazy" alt="" src="./img/IMG_5919-lg.jpg">
               <h3>Lorem Ipsum</h3>
               <p>Define CSS custom properties for colors and typography</p>
             </article>
           </li>
           <li>
             <article>
-              <img alt="" src="./img/IMG_5919-lg.jpg">
+              <img loading="lazy" alt="" src="./img/IMG_5919-lg.jpg">
               <h3>Lorem Ipsum</h3>
               <p>Define CSS custom properties for colors and typography</p>
             </article>
           </li>
           <li>
             <article>
-              <img alt="" src="./img/IMG_5919-lg.jpg">
+              <img loading="lazy" alt="" src="./img/IMG_5919-lg.jpg">
               <h3>Lorem Ipsum</h3>
               <p>Define CSS custom properties for colors and typography</p>
             </article>
           </li>
-          <li>
-            <article>
-              <img alt="" src="./img/IMG_5919-lg.jpg">
-              <h3>Lorem Ipsum</h3>
-              <p>Define CSS custom properties for colors and typography</p>
-            </article>
-          </li>
-
         </ul>
       </section>
 
@@ -232,7 +227,6 @@
     </article>
 
     <article>
-
       <h3>Native Accordions</h3>
 
       <p>We are using the details and summary components to render native accordions.
@@ -244,7 +238,9 @@
         <summary>Accordion 1</summary>
         <div>
           <p>This is the animated content for section 1.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magni atque numquam. Nobis sint soluta ipsa odit id impedit accusamus, recusandae alias, asperiores fugiat suscipit, nostrum vero maiores necessitatibus explicabo.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magni atque numquam. Nobis sint soluta ipsa
+            odit id impedit accusamus, recusandae alias, asperiores fugiat suscipit, nostrum vero maiores necessitatibus
+            explicabo.</p>
         </div>
       </details>
 
@@ -252,7 +248,9 @@
         <summary>Accordion 2</summary>
         <div>
           <p>This is the animated content for section 2.</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, impedit necessitatibus tempore natus, deserunt delectus dolorum recusandae atque, sit ipsam ratione dolorem dolore iusto amet et vero in saepe aliquam.</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, impedit necessitatibus tempore natus,
+            deserunt delectus dolorum recusandae atque, sit ipsam ratione dolorem dolore iusto amet et vero in saepe
+            aliquam.</p>
         </div>
       </details>
     </article>
@@ -361,6 +359,45 @@
       </section>
     </article>
 
+    <article id="layouts">
+      <h2>Layouts</h2>
+      <section>
+        <figure>
+          <img alt="" src="./img/IMG_5919-lg.jpg">
+        </figure>
+        <div>
+          <h3>Section with text right</h3>
+          <p>This is an example of a section with content right and image left</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            harum deserunt delectus molestias blanditiis magni, dolorum
+            similique ut ducimus provident voluptate libero dicta debitis
+            consequuntur. Repellat nisi temporibus voluptatum quidem?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            harum deserunt delectus molestias blanditiis magni, dolorum
+            similique ut ducimus provident voluptate libero dicta debitis
+            consequuntur. Repellat nisi temporibus voluptatum quidem?</p>
+        </div>
+      </section>
+      <section>
+        <h3>Split Screen</h3>
+        <div class="grid">
+          <div>
+            <p>We use a lightweight grid system rather than a heavier framework.
+              Most grid systems mainly target larger displays, while mobile layouts
+              typically collapse to a single column.</p>
+            <p>Our simple grid keeps the markup predictable: start with one column,
+              then expand into balanced columns as space allows. It is easy to scan,
+              easier to maintain, and keeps layout decisions close to the content.</p>
+          </div>
+          <div>
+            <figure>
+              <img alt="" src="./img/IMG_5919-lg.jpg">
+            </figure>
+          </div>
+        </div>
+      </section>
+    </article>
+
     <article id="forms">
       <h2>Forms & Interactions</h2>
 
@@ -421,12 +458,13 @@
       <section>
         <h3>Images with Captions</h3>
         <figure>
-          <svg width="300" height="200"
+          <img alt="" src="./img/IMG_5919-lg.jpg">
+          <!-- <svg width="300" height="200"
             style="background: linear-gradient(135deg, #D96E3C 0%, #8BBF2F 100%); border-radius: 4px;">
             <text x="50%" y="50%" text-anchor="middle" dy="0.3em" fill="white" font-size="24" font-weight="bold">
               Image Placeholder
             </text>
-          </svg>
+          </svg> -->
           <figcaption>This is a placeholder image with a descriptive caption below it.</figcaption>
         </figure>
       </section>

@@ -23,6 +23,10 @@ details > div {
   border: 1px solid var(--fs-color-primary-30);
 }
 
+details:last-of-type {
+  margin-bottom: 1rem;
+}
+
 details summary::after {
   content: "";
   width: var(--accordion-chevron-size);
