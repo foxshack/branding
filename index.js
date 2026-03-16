@@ -1,6 +1,9 @@
-const menuButton = document.querySelector('header button:not(.nav-close)');
+const menuSelector = '[data-fs-nav=menu]';
+const closeSelector = '[data-fs-nav=close]';
+
 const nav = document.querySelector('header nav');
-const closeButton = document.querySelector('.nav-close');
+const menuButton = document.querySelector(`header ${menuSelector}`);
+const closeButton = document.querySelector(`header ${closeSelector}`);
 
 const isMobile = () => window.innerWidth <= 900;
 
@@ -39,7 +42,7 @@ closeButton.addEventListener('click', () => {
 });
 
 // Close nav when a link is clicked
-nav.querySelectorAll('a:not(.nav-close)').forEach(link => {
+nav.querySelectorAll(`a:not(${closeSelector})`).forEach(link => {
   link.addEventListener('click', () => {
     closeNav();
   });

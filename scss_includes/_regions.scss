@@ -36,23 +36,7 @@ header a.brand {
   color: var(--fs-color-text-light);
 }
 
-header button {
-  display: block;
-  background-color: var(--fs-button-bg);
-  color: var(--fs-color-text-light);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: var(--fs-border-radius);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: var(--fs-button-hover-bg);
-  }
-
+header [data-fs-nav] {
   @media (min-width: 900px) {
     display: none;
   }
@@ -83,24 +67,9 @@ body>header {
     }
   }
 
-  nav .nav-close {
-    display: block;
-    background: transparent;
-    border: none;
-    color: var(--fs-color-text-light);
-    font-size: 1.5rem;
+  [data-fs-nav=close] {
     padding: 1rem;
-    cursor: pointer;
     float: right;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--fs-color-tertiary-20);
-    }
-
-    @media (min-width: 900px) {
-      display: none;
-    }
   }
 
   nav ul,
